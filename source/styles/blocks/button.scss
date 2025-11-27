@@ -1,0 +1,19 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.button {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: size(15px);
+  padding: size(22px) size(65px);
+  background-color: v.$default-black;
+  font-family: $ff-default;
+  font-weight: 600;
+  font-size: size(14px);
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  color: v.$default-white;
+}

@@ -1,0 +1,51 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.nav {
+  display: none;
+
+  @include m.vp-1023 {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &--opened {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: size(32px);
+    align-items: center;
+  }
+
+  &__list {
+    @include m.list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: size(32px);
+    row-gap: size(10px);
+  }
+
+  &__link {
+    font-size: size(13px);
+    line-height: 110%;
+    text-decoration: none;
+    color: v.$default-black;
+    letter-spacing: -0.03em;
+    text-transform: lowercase;
+  }
+
+  &__button {
+    display: flex;
+    gap: size(11px);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__button-icon {
+    border-radius: 12px;
+    width: size(36px);
+    height: size(36px);
+    background-color: v.$default-black;
+  }
+}

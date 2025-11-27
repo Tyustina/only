@@ -1,0 +1,63 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.projects {
+  @include m.container;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid v.$light-grey;
+  margin-top: size(65px);
+  padding-top: size(40px);
+
+  h2 {
+    grid-area: 1/2/2/3;
+    font-weight: 600;
+    font-size: size(26px);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-bottom: size(24px);
+  }
+
+  &__text {
+    display: grid;
+    gap: 5px;
+    grid-area: 2/2/3/3;
+    opacity: 0.6;
+
+    p {
+      @include text;
+    }
+  }
+
+  &__label {
+    grid-area: 1/1/2/2;
+  }
+
+  &__wrapper {
+    grid-area: 3/1/4/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: size(80px) size(19px);
+    margin-top: 80px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__list {
+    display: contents;
+
+    &:nth-child(n+2) {
+      border: 1px solid red;
+    }
+  }
+
+  &__button {
+    grid-column: 1/-1;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+}

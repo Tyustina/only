@@ -1,0 +1,62 @@
+@use "./variables.scss" as v;
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+
+  @media (max-width: (v.$vp-1280 - 1px)) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: (v.$vp-375 - 1px)) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@mixin text {
+  font-family: $ff-second;
+  font-weight: 400;
+  font-size: size($fz-default);
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+@mixin vp-1439 {
+  @media (max-width: (v.$vp-1440 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1279 {
+  @media (max-width: (v.$vp-1280 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: (v.$vp-1024 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: (v.$vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-374 {
+  @media (max-width: (v.$vp-375 - 1px)) {
+    @content;
+  }
+}

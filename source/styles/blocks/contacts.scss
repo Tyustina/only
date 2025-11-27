@@ -1,0 +1,36 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+
+.contacts {
+  @include m.list-reset;
+  color: v.$default-black;
+
+  &__item {
+    &:last-child {
+      margin-top: size(39px);
+    }
+
+    p {
+      font-size: size(13px);
+      line-height: 110%;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      text-transform: lowercase;
+      margin: 0;
+      opacity: 0.6;
+    }
+  }
+
+  &__link {
+    font-family: $ff-second;
+    font-weight: 500;
+    font-size: size(18px);
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: v.$default-black;
+  }
+
+}
