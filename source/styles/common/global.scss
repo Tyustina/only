@@ -44,6 +44,11 @@ video {
   height: auto;
 }
 
+a {
+  color: $default-black;
+  text-decoration: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

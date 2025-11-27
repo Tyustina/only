@@ -89,28 +89,8 @@
     }
   }
 
-  &__links {
+  &__presentation {
     grid-area: 2 / 1 / 3 / 2;
-    display: flex;
-    place-items: center;
-    gap: 5px;
-
-    a {
-      border-radius: size(15px);
-      padding: size(16px) size(15px);
-      color: v.$default-black;
-      background-color: v.$default-white;
-      text-decoration: none;
-    }
-
-    p {
-      font-size: size(13px);
-      line-height: 110%;
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      text-transform: lowercase;
-      opacity: 0.6;
-    }
   }
 
   &__button {
