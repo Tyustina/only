@@ -7,6 +7,10 @@
   gap: size(24px);
   cursor: pointer;
 
+  @include vp-1023 {
+    gap: 20px;
+  }
+
 
   &__img {
     display: flex;
@@ -16,6 +20,12 @@
     height: size(450px);
     transition: transform 0.5s ease-in, border-radius 0.5s ease-in;
     overflow: hidden;
+
+    @include vp-1023 {
+      border-radius: 20px;
+      width: 357px;
+      height: 349px;
+    }
 
     img {
       position: absolute;
@@ -35,19 +45,27 @@
 
     h3 {
       font-weight: 600;
-      font-size: 18px;
+      font-size: size(18px);
       line-height: 125%;
       letter-spacing: -0.03em;
       margin: 0;
+
+      @include vp-1023 {
+        font-size: 15px;
+      }
     }
 
     p {
       font-family: $ff-second;
       font-weight: 500;
-      font-size: 15px;
+      font-size: size(15px);
       line-height: 130%;
       letter-spacing: -0.02em;
       margin: 0;
+
+      @include vp-1023 {
+        font-size: 15px;
+      }
     }
   }
 
@@ -58,7 +76,7 @@
     }
 
     img {
-      transform: scale(1.05) translate(5px,-5px);
+      transform: scale(1.05) translate(5px, -5px);
     }
   }
 }

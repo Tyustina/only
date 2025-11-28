@@ -27,6 +27,7 @@
     }
     &__text {
         font-family: $ff-second;
+        margin: 0;
     }
     &__about {
         grid-area: 1/2/2/3;

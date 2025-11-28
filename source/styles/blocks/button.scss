@@ -16,4 +16,10 @@
   letter-spacing: -0.03em;
   text-transform: lowercase;
   color: v.$default-white;
+
+  @include vp-1023 {
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 22px 65px;
+  }
 }

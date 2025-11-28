@@ -29,6 +29,10 @@
   line-height: 140%;
   letter-spacing: -0.02em;
   margin: 0;
+
+  @include vp-1023 {
+    font-size: 15px;
+  }
 }
 
 @mixin vp-1439 {

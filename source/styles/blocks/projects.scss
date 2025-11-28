@@ -17,6 +17,10 @@
     letter-spacing: -0.03em;
     margin: 0;
     margin-bottom: size(24px);
+
+    @include vp-1023 {
+      font-style: 22px;
+    }
   }
 
   &__text {
@@ -44,6 +48,7 @@
 
     @include vp-1023 {
       grid-template-columns: 1fr 1fr;
+      gap: 60px 15px;
     }
   }
 

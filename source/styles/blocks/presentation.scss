@@ -12,6 +12,11 @@
         color: v.$default-black;
         background-color: v.$default-white;
         text-decoration: none;
+
+        @include vp-1023 {
+            border-radius: 12px;
+            padding: 14px;
+        }
     }
 
     p {
@@ -21,5 +26,9 @@
         letter-spacing: -0.04em;
         text-transform: lowercase;
         opacity: 0.6;
+
+        @include vp-1023 {
+            font-size: 13px;
+        }
     }
 }

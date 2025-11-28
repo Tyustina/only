@@ -9,6 +9,10 @@
   &__item {
     &:last-child {
       margin-top: size(39px);
+
+      @include vp-1023 {
+        margin: 0;
+      }
     }
 
     p {
@@ -19,6 +23,10 @@
       text-transform: lowercase;
       margin: 0;
       opacity: 0.6;
+
+      @include vp-1023 {
+        font-size: 13px;
+      }
     }
   }
 
@@ -31,6 +39,10 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: v.$default-black;
+
+    @include vp-1023 {
+      font-size: 15px;
+    }
   }
 
 }
