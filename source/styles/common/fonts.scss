@@ -17,6 +17,15 @@
 }
 
 @font-face {
+  font-family: "TT-Runs";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../../fonts/tt-runs-trial-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "TT-Commons";
   font-weight: 400;
   font-style: normal;
