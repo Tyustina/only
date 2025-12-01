@@ -38,6 +38,14 @@
     p {
       @include text;
     }
+
+    p:first-child {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
   }
 
   &__label {
@@ -55,6 +63,7 @@
     @include vp-1023 {
       grid-template-columns: 1fr 1fr;
       gap: 60px 15px;
+      justify-items: center;
     }
 
     @include vp-767 {

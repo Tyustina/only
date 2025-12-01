@@ -2,18 +2,39 @@
 @use "../common/mixin.scss" as m;
 
 .nav {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 
-  @include m.vp-1023 {
-    position: absolute;
+  @include vp-1023 {
+    transform: translateY(-100%);
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
   }
 
-  &--opened {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: size(32px);
-    align-items: center;
+  &.is-open {
+    transform: translateY(0);
+    opacity: 1;
+
+    @include vp-1023 {
+      display: grid;
+      grid-template-columns: 90% 10%;
+      row-gap: 20px;
+      column-gap: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 100px;
+      padding-top: 100px;
+      background-color: $light-base;
+      box-shadow: 0 20px 37px 0 rgba(0, 0, 0, 0.16);
+      z-index: 5;
+    }
   }
 
   &__list {
@@ -22,6 +43,12 @@
     flex-wrap: wrap;
     column-gap: size(32px);
     row-gap: size(10px);
+
+    @include vp-1023 {
+      grid-area: 1/1/2/2;
+      flex-direction: column;
+      row-gap: 30px;
+    }
   }
 
   &__link {
@@ -31,6 +58,11 @@
     color: v.$default-black;
     letter-spacing: -0.03em;
     text-transform: lowercase;
+
+    @include vp-1023 {
+      font-size: 24px;
+      font-weight: 600;
+    }
   }
 
   &__button {
@@ -40,6 +72,11 @@
     align-items: center;
     border: none;
     background-color: transparent;
+
+    @include vp-1023 {
+      grid-area: 2/2/3/-1;
+      margin-left: auto;
+    }
   }
 
   &__button-icon {
@@ -47,5 +84,28 @@
     width: size(36px);
     height: size(36px);
     background-color: v.$default-black;
+  }
+
+  &__contacts {
+    display: none;
+
+    @include vp-1023 {
+      grid-area: 2/1/3/2;
+      display: block;
+      justify-self: flex-end;
+    }
+  }
+
+  &__socials {
+    display: none;
+
+    @include vp-1023 {
+      grid-area: 1/2/3/-1;
+      margin-left: auto;
+      margin-bottom: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
   }
 }

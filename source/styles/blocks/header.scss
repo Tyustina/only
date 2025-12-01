@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 
     img {
       width: size(73px);
@@ -34,17 +35,33 @@
     display: none;
 
     @include m.vp-1023 {
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 4px;
       border: none;
       background-color: transparent;
+      z-index: 10;
 
       span {
+        position: relative;
         display: block;
         width: 30px;
         height: 2px;
         background-color: v.$default-black;
+        transition: transform 0.3s ease-in, margin 0.3s ease-in;
+      }
+    }
+
+    &.is-open {
+      span:first-child {
+        top: 8px;
+        transform: rotate(45deg);
+      }
+
+      span:last-child {
+        top: 2px;
+        transform: rotate(-45deg);
       }
     }
   }

@@ -4,6 +4,7 @@
 .banners {
     @include m.container;
     position: relative;
+    width: 100%;
 
     &__slider {
         @include m.list-reset;
