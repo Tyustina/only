@@ -40,29 +40,6 @@ function openNav() {
 }
 window.addEventListener("resize", switchingNav);
 
-// source/scripts/modules/video.js
-var videoContainer = document.querySelector(".hero__media");
-function scaleVideo() {
-  if (videoContainer) {
-    const maxScale = 8;
-    const minScale = 1;
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (documentHeight === 0) {
-        videoContainer.style.transform = `scale(${minScale})`;
-        return;
-      }
-      const scrollProgress = scrollTop / documentHeight;
-      let scale = minScale + (maxScale - minScale) * scrollProgress;
-      scale = Math.max(minScale, Math.min(maxScale, scale));
-      videoContainer.style.transform = `scale(${scale})`;
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-  }
-}
-
 // source/scripts/modules/projects.js
 var textBlock = document.querySelector(".projects__text");
 var paragraph = document.querySelector(".hero__about p");
@@ -75,7 +52,6 @@ function movingParagraph() {
 
 // source/scripts/main.js
 window.addEventListener("DOMContentLoaded", () => {
-  scaleVideo();
   switchingNav();
 });
 window.addEventListener("resize", movingParagraph);
