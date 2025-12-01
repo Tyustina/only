@@ -77,7 +77,18 @@
 
     @include vp-767 {
       display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__items {
+    display: contents;
+
+    @include vp-767 {
+      display: flex;
       gap: 10px;
+      overflow-x: scroll;
     }
   }
 
@@ -85,6 +96,7 @@
     display: none;
 
     @include vp-767 {
+      display: block;
       font-weight: 600;
       font-size: 20px;
       line-height: 120%;
