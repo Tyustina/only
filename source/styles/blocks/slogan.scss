@@ -1,0 +1,8 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.slogan {
+    &__string {
+        display: flex;
+    }
+}

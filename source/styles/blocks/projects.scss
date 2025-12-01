@@ -9,6 +9,12 @@
   margin-top: size(65px);
   padding-top: size(40px);
 
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
   h2 {
     grid-area: 1/2/2/3;
     font-weight: 600;
@@ -50,13 +56,31 @@
       grid-template-columns: 1fr 1fr;
       gap: 60px 15px;
     }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      gap: 46px;
+    }
   }
 
   &__list {
     display: contents;
 
-    &:nth-child(n+2) {
-      border: 1px solid red;
+    @include vp-767 {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  &__list h3 {
+    display: none;
+
+    @include vp-767 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: -0.03em;
+      margin: 0;
     }
   }
 

@@ -22,6 +22,11 @@
     img {
       width: size(73px);
       height: size(24px);
+
+      @include vp-767 {
+        width: 52px;
+        height: 17px;
+      }
     }
   }
 

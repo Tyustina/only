@@ -24,8 +24,19 @@ function scaleVideo() {
   }
 }
 
+// source/scripts/modules/projects.js
+var textBlock = document.querySelector(".projects__text");
+var paragraph = document.querySelector(".hero__about p");
+isMobile = window.innerWidth < 768;
+function movingParagraph() {
+  if (isMobile) {
+    textBlock.appendChild(paragraph);
+  }
+}
+
 // source/scripts/main.js
 window.addEventListener("DOMContentLoaded", () => {
   scaleVideo();
 });
+window.addEventListener("resize", movingParagraph);
 //# sourceMappingURL=main.js.map
