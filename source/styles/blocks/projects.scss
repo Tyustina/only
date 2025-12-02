@@ -76,9 +76,15 @@
     display: contents;
 
     @include vp-767 {
+      //
+      width: 100vw;
+      //
       display: flex;
       flex-direction: column;
       gap: 40px;
+      overflow: hidden;
+      user-select: none;
+
     }
   }
 
@@ -88,7 +94,16 @@
     @include vp-767 {
       display: flex;
       gap: 10px;
+      transition: transform 0.8s ease-in-out;
+      //
+      cursor: grab;
       overflow-x: scroll;
+      scrollbar-width: none;
+      padding-right: 0;
+
+      &:active {
+        cursor: grabbing;
+      }
     }
   }
 
