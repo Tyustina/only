@@ -7,6 +7,7 @@
   font-size: size($fz-default);
   line-height: 120%;
   letter-spacing: -0.03em;
+  margin: 0;
   text-transform: lowercase;
 
   @include vp-1023 {

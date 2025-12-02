@@ -13,7 +13,7 @@
   &__link {
     display: flex;
     place-items: center;
-    gap: size(18px);
+    gap: size(11px);
     text-decoration: none;
 
     p {
@@ -28,10 +28,18 @@
     }
 
     span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: size(12px);
       width: size(48px);
       height: size(48px);
       background-color: v.$default-white;
+
+      img {
+        width: size(var(--w));
+        height: size(var(--h));
+      }
     }
   }
 }

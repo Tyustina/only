@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   border-radius: size(15px);
-  padding: size(22px) size(65px);
+  padding: size(20px) size(64px);
   background-color: v.$default-black;
   font-family: $ff-default;
   font-weight: 600;
@@ -20,7 +20,7 @@
   @include vp-1023 {
     font-size: 14px;
     border-radius: 15px;
-    padding: 22px 65px;
+    padding: 20px 64px;
   }
 
   @include vp-767 {

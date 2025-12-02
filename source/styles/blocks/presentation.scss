@@ -3,10 +3,16 @@
 
 .presentation {
     display: flex;
-    place-items: center;
+    align-items: center;
     gap: 5px;
 
     a {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        text-transform: lowercase;
+        text-align: center;
         border-radius: size(15px);
         padding: size(16px) size(15px);
         color: v.$default-black;
@@ -19,12 +25,13 @@
         }
     }
 
-    p {
+    span {
         font-size: size(13px);
         line-height: 110%;
         font-weight: 400;
         letter-spacing: -0.04em;
         text-transform: lowercase;
+        margin-left: 10px;
         opacity: 0.6;
 
         @include vp-1023 {

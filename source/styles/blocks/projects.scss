@@ -5,8 +5,9 @@
   @include m.container;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  row-gap: 24px;
   border-top: 1px solid v.$light-grey;
-  margin-top: size(65px);
+  margin-top: size(66px);
   padding-top: size(40px);
 
   @include vp-767 {
@@ -22,7 +23,7 @@
     line-height: 120%;
     letter-spacing: -0.03em;
     margin: 0;
-    margin-bottom: size(24px);
+    margin-left: size(40px);
 
     @include vp-1023 {
       font-style: 22px;
@@ -30,9 +31,11 @@
   }
 
   &__text {
+    grid-area: 2/2/3/3;
+    width: 80%;
     display: grid;
     gap: 5px;
-    grid-area: 2/2/3/3;
+    margin-left: size(40px);
     opacity: 0.6;
 
     p {
@@ -58,7 +61,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: size(80px) size(19px);
-    margin-top: 80px;
+    padding-top: 54px;
 
     @include vp-1023 {
       grid-template-columns: 1fr 1fr;
@@ -122,7 +125,6 @@
 
   &__button {
     grid-column: 1/-1;
-    margin: 0 auto;
-    margin-bottom: 5px;
+    margin: 56px auto 5px;
   }
 }

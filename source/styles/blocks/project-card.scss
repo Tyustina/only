@@ -86,10 +86,19 @@
     .project-card__img {
       transform: scale(1.05);
       border-radius: size(65px);
+
+      @include vp-767 {
+        transform: none;
+        border-radius: unset;
+      }
     }
 
     img {
       transform: scale(1.05) translate(5px, -5px);
+
+      @include vp-767 {
+        transform: none;
+      }
     }
   }
 }

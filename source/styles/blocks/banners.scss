@@ -3,8 +3,12 @@
 
 .banners {
     @include m.container;
-    position: relative;
     width: 100%;
+    padding-top: 75px;
+
+    &__wrapper {
+        position: relative;
+    }
 
     &__slider {
         @include m.list-reset;
@@ -12,7 +16,7 @@
 
     &__slide {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 42% 58%;
         border-radius: 30px;
         background-color: $default-white;
         padding-top: 100px;
@@ -21,41 +25,20 @@
         padding-right: 30px;
     }
 
-    &__slogan {
-        display: flex;
-        flex-direction: column;
+    &__slide-text {
+        display: grid;
+        gap: 30px;
+    }
 
-        p,
-        span {
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 115%;
-            letter-spacing: -0.03em;
-            color: $dark-green;
-            margin: 0;
-            margin-right: 10px;
-        }
-
-        img {
-            margin-right: 5px;
-
-            &:last-of-type {
-                border-radius: 154px;
-                padding: 10px 18px;
-                background-color: $green;
-            }
-        }
-
-        span {
-            border-radius: 154px;
-            padding: 2px 23px 5px;
-            ;
-            background-color: $green;
-        }
+    &__label {
+        font-weight: 600;
+        font-family: $ff-default;
     }
 
     p:not(.banners__slogan p) {
-        font-weight: 450;
+        width: 85%;
+        font-family: $ff-second;
+        font-weight: 400;
         font-size: 16px;
         line-height: 140%;
         letter-spacing: -0.02em;
@@ -63,52 +46,26 @@
     }
 
     &__slide-pictures {
+        position: relative;
         display: flex;
     }
 
-    &__slide-realty {
-        position: relative;
-
-        div:nth-child(1) img {
-            position: absolute;
-            top: 50px;
-            left: -20px;
-        }
-
-        div:nth-child(2) img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
-
-        div:nth-child(3) img {
-            position: absolute;
-            top: 70px;
-            left: 0;
-        }
-
-        div:nth-child(4) img {
-            position: absolute;
-            right: 97px;
-            top: 128px;
-        }
-
-
+    &__button {
+        margin-top: -6px;
     }
 
     &__toggles {
         @include m.list-reset;
         position: absolute;
         bottom: 40px;
-        left: 70px;
+        left: 40px;
         display: flex;
         flex-wrap: wrap;
         gap: 2px 10px;
     }
 
 
-    &__custom-toggle {
+    &__toggle {
         display: block;
         width: 10px;
         height: 10px;
@@ -117,7 +74,63 @@
         opacity: 0.3;
     }
 
-    &__custom-toggle:checked {
+    &__toggle.is-active {
         opacity: 1;
+    }
+
+    &__img {
+        position: absolute;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__slide-pictures--realty>&__img--1 {
+        top: 210px;
+        left: -90px;
+    }
+
+    &__slide-pictures--realty>&__img--2 {
+        top: -29px;
+        left: 187px;
+    }
+
+    &__slide-pictures--realty>&__img--3 {
+        top: 195px;
+        left: 274px;
+    }
+
+    &__slide-pictures--realty>&__img--4 {
+        top: -22px;
+        right: -11px;
+    }
+
+    &__slide-pictures--app>&__img--1 {
+        top: 210px;
+        left: -90px;
+        z-index: 2;
+    }
+
+    &__slide-pictures--app>&__img--2 {
+        top: -29px;
+        left: 90px;
+    }
+
+    &__slide-pictures--app>&__img--3 {
+        top: 320px;
+        right: -20px;
+        z-index: 2;
+    }
+
+    &__slide-pictures--app>&__img--4 {
+        top: 0;
+        left: 410px;
+    }
+
+    &__slide-pictures--app>&__img--5 {
+        top: 425px;
+        right: -10px;
+        z-index: 2;
     }
 }

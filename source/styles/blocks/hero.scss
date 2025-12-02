@@ -6,9 +6,11 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: size(214px);
+  row-gap: size(215px);
   border-bottom: 1px solid v.$light-grey;
   margin-bottom: size(65px);
+  padding-top: size(60px);
+  padding-bottom: size(38px);
 
   @include vp-767 {
     display: flex;
@@ -35,11 +37,12 @@
 
   &__media {
     position: absolute;
-    top: 25%;
+    top: calc(50% - size(161px));
     left: calc(50% - size(228px));
     width: size(456px);
     height: size(230px);
-    border-radius: 20px;
+    background-color: $default-black;
+    border-radius: size(20px);
     overflow: hidden;
 
     @include vp-1023 {
@@ -63,10 +66,11 @@
     }
   }
 
+
   &__content {
     grid-area: 2/1/3/3;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 20% 30% 50%;
 
     @include vp-767 {
       grid-template-columns: 1fr 1fr;
@@ -75,12 +79,15 @@
   }
 
   &__counter {
+    grid-column: 1/2;
     height: fit-content;
     display: grid;
     grid-template-columns: max-content 1fr;
     align-items: end;
     grid-template-rows: auto auto;
     gap: size(5px) size(15px);
+    margin-top: auto;
+    padding-bottom: 25px;
 
     @include vp-1023 {
       gap: 15px 8px;
@@ -91,6 +98,7 @@
     }
 
     p:first-of-type {
+      grid-area: 1 / 1 / 3 / 2;
       font-weight: 600;
       font-size: size(56px);
       line-height: 90%;
@@ -102,7 +110,7 @@
     }
 
     p:last-of-type {
-      grid-area: 2 / 1 / 3 / -1;
+      grid-area: 2 / 2 / 3 / -1;
       font-size: size(13px);
       line-height: 110%;
       font-weight: 500;
@@ -140,9 +148,17 @@
     }
   }
 
+  &__contacts {
+    grid-column: 2/3;
+    margin: 0 auto;
+  }
+
   &__about {
+    grid-column: 3/4;
     display: grid;
     grid-template-columns: 55% 45%;
+    margin-left: 40px;
+    row-gap: size(18px);
 
     @include vp-767 {
       display: flex;
