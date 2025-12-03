@@ -5,11 +5,16 @@
   @include m.container;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 24px;
+  row-gap: size(24px);
   border-top: 1px solid v.$light-grey;
   margin-top: size(66px);
   padding-top: size(40px);
 
+  @include vp-1023 {
+    row-gap: 20px;
+    margin-top: 78px;
+    padding-top: 21px;
+  }
   @include vp-767 {
     display: flex;
     flex-direction: column;
@@ -26,7 +31,8 @@
     margin-left: size(40px);
 
     @include vp-1023 {
-      font-style: 22px;
+      font-size: 20px;
+      margin-left: 20px;
     }
   }
 
@@ -37,6 +43,11 @@
     gap: 5px;
     margin-left: size(40px);
     opacity: 0.6;
+
+    @include vp-1023 {
+      width: 100%;
+      margin-left: 20px;
+    }
 
     p {
       @include text;
@@ -61,12 +72,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: size(80px) size(19px);
-    padding-top: 54px;
+    padding-top: size(54px);
 
     @include vp-1023 {
       grid-template-columns: 1fr 1fr;
       gap: 60px 15px;
       justify-items: center;
+      padding-top: 40px;
     }
 
     @include vp-767 {
@@ -125,6 +137,10 @@
 
   &__button {
     grid-column: 1/-1;
-    margin: 56px auto 5px;
+    margin: size(56px) auto size(5px);
+
+    @include vp-1023 {
+      margin-top: 28px;
+    }
   }
 }

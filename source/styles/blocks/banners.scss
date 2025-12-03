@@ -4,7 +4,12 @@
 .banners {
     @include m.container;
     width: 100%;
-    padding-top: 75px;
+    padding-top: size(75px);
+    overflow: hidden;
+
+    @include vp-1023 {
+        padding-top: 54px;
+    }
 
     &__wrapper {
         position: relative;
@@ -12,22 +17,46 @@
 
     &__slider {
         @include m.list-reset;
+        position: relative;
+        width: 100%;
+        min-height: 650px;
     }
 
     &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
         display: grid;
+        width: 100%;
+        height: 100%;
         grid-template-columns: 42% 58%;
-        border-radius: 30px;
+        border-radius: size(30px);
         background-color: $default-white;
-        padding-top: 100px;
-        padding-bottom: 200px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-top: size(100px);
+        padding-bottom: size(200px);
+        padding-left: size(30px);
+        padding-right: size(30px);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        @include vp-1023 {
+            grid-template-columns: 65% 35%;
+            padding: 60px 25px 120px;
+        }
+    }
+
+    &__slide.is-active {
+        opacity: 1;
     }
 
     &__slide-text {
         display: grid;
-        gap: 30px;
+        gap: size(30px);
+
+        @include vp-1023 {
+            grid-template-rows: max-content;
+            gap: 0;
+        }
     }
 
     &__label {
@@ -35,14 +64,97 @@
         font-family: $ff-default;
     }
 
-    p:not(.banners__slogan p) {
+    p:not(.banners__title p) {
         width: 85%;
         font-family: $ff-second;
         font-weight: 400;
-        font-size: 16px;
+        font-size: size(16px);
         line-height: 140%;
         letter-spacing: -0.02em;
         margin: 0;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: size(2px);
+
+        @include vp-1023 {
+            gap: 0;
+        }
+    }
+
+
+    &__title-string {
+        display: flex;
+        align-items: center;
+
+        p,
+        span {
+            font-weight: 600;
+            font-size: size(36px);
+            line-height: 100%;
+            letter-spacing: -0.03em;
+            color: $dark-green;
+            margin: 0;
+            margin-right: size(12px);
+
+            @include vp-1023 {
+                font-size: 28px;
+                line-height: 115%;
+                margin-right: 8px;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        span {
+            border-radius: size(154px);
+            padding: size(2px) size(23px) size(5px);
+            line-height: 115%;
+            background-color: $green;
+            margin: 0;
+
+            @include vp-1023 {
+                padding: 2px 18px 5px;
+            }
+        }
+    }
+
+    &__icon--line {
+        @include vp-1023 {
+            width: 36px;
+            height: 29px;
+        }
+    }
+
+    &__icon--heart,
+    &__icon--town {
+        @include vp-1023 {
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__icon--planet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        padding: size(10px) size(18px);
+        border-radius: size(180px);
+
+        @include vp-1023 {
+            padding: 8px 14px;
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
 
     &__slide-pictures {
@@ -71,6 +183,8 @@
         height: 10px;
         background-color: $default-black;
         border-radius: 100%;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
         opacity: 0.3;
     }
 
@@ -107,30 +221,35 @@
     }
 
     &__slide-pictures--app>&__img--1 {
-        top: 210px;
-        left: -90px;
+        top: 243px;
+        left: -96px;
         z-index: 2;
     }
 
     &__slide-pictures--app>&__img--2 {
-        top: -29px;
-        left: 90px;
+        top: -51px;
+        left: 92px;
     }
 
     &__slide-pictures--app>&__img--3 {
-        top: 320px;
-        right: -20px;
+        top: 314px;
+        right: 47px;
         z-index: 2;
     }
 
     &__slide-pictures--app>&__img--4 {
-        top: 0;
-        left: 410px;
+        top: 20px;
+        left: 354px;
     }
 
     &__slide-pictures--app>&__img--5 {
-        top: 425px;
-        right: -10px;
+        top: 402px;
+        right: 96px;
         z-index: 2;
+    }
+
+    &__slide-pictures--app>&__img--6 {
+        top: 141px;
+        left: -2px;
     }
 }

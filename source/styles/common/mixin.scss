@@ -8,12 +8,11 @@
 
 @mixin container {
   width: 100%;
-  min-width: 1440px;
   padding-left: 30px;
   padding-right: 30px;
   margin: 0 auto;
 
-  @media (max-width: (v.$vp-1280 - 1px)) {
+  @media (max-width: (v.$vp-1024 - 1px)) {
     padding-left: 20px;
     padding-right: 20px;
   }

@@ -147,18 +147,19 @@
             <a class="contacts__link" href="https://t.me/onlydigitalagency">@onlydigitalagency</a>
           </li>
         </ul>
-        <div class="hero__about">
+        <div class="hero__text">
           <p>Only.digital — агентство с фокусом на сильную аналитику, дизайн и разработку. В основе наших
             проектов лежат
             идеи, создаваемые на стыке стратегии, креатива и технологий.</p>
-          <div class="hero__presentation presentation">
-            <a href="#">pdf</a>
-            <a href="#">pitch</a>
-            <span>презентация<br>компании</span>
-          </div>
-          <button class="hero__button button">Начать проект</button>
         </div>
+        <div class="hero__presentation presentation">
+          <a href="#">pdf</a>
+          <a href="#">pitch</a>
+          <span>презентация<br>компании</span>
+        </div>
+        <button class="hero__button button">Начать проект</button>
       </div>
+      
     </section>
     <section class="projects">
       <h2>Аналитика, брендинг<br>и разработка для B2B</h2>
@@ -294,23 +295,27 @@
           <li class="banners__slide banners__slide--realty is-active" data-id="1">
             <div class="banners__slide-text">
               <h2 class="banners__label label">недвижимость</h2>
-              <div class="banners__slogan slogan">
-                <div class="slogan__string slogan__string--1">
+              <div class="banners__title">
+                <div class="banners__title-string">
                   <p>Формируем</p>
-                  <img src="./images/icon-line.svg" width="44" height="35" alt="">
+                  <img class="banners__icon--line" src="./images/icon-line.svg" width="44" height="35" alt="">
                 </div>
-                <div class="slogan__string slogan__string--2">
-                  <picture>
-                    <img src="./images/icon-heart.png" width="44" height="44" alt="">
-                  </picture>
+                <div class="banners__title-string">
+                  <div class="banners__icon--heart">
+                    <picture>
+                      <img src="./images/icon-heart.png" width="44" height="44" alt="">
+                    </picture>
+                  </div>
                   <p>ценность бренда</p>
-                  <picture>
-                    <img src="./images/icon-town.png" width="44" height="44" alt="">
-                  </picture>
+                  <div class="banners__icon--town">
+                    <picture>
+                      <img src="./images/icon-town.png" width="44" height="44" alt="">
+                    </picture>
+                  </div>
                   <p>ЖК</p>
                 </div>
-                <div class="slogan__string slogan__string--3">
-                  <div>
+                <div class="banners__title-string">
+                  <div class="banners__icon--planet">
                     <img src="./images/icon-planet.svg" width="30" height="30" alt="">
                   </div>
                   <span>в digital - среде</span>
@@ -343,20 +348,20 @@
               </div>
             </div>
           </li>
-          <li class="banners__slide banners__slide--app is-active" data-id="1">
+          <li class="banners__slide banners__slide--app" data-id="2">
             <div class="banners__slide-text">
               <h2 class="banners__label label">Mobile App</h2>
-              <div class="banners__slogan slogan">
-                <div class="slogan__string slogan__string--1">
+              <div class="banners__title">
+                <div class="banners__title-string">
                   <p>Проектируем</p>
                 </div>
-                <div class="slogan__string slogan__string--2">
+                <div class="banners__title-string">
                   <div>
-                    <img src="./images/icon-planet.svg" width="30" height="30" alt="">
+                    <img src="./images/icon-phone.svg" width="19" height="24" alt="">
                   </div>
                   <p>мобильные</p>
                 </div>
-                <div class="slogan__string slogan__string--3">
+                <div class="banners__title-string">
                   <p>приложения</p>
                 </div>
               </div>
@@ -366,22 +371,22 @@
             <div class="banners__slide-pictures banners__slide-pictures--app">
               <div class="banners__img banners__img--1">
                 <picture>
-                  <img src="./images/banners/app-1.png" srcset="./images/banners/app-1@2x.png" width="315" height="167" alt="">
+                  <img src="./images/banners/app-1.png" srcset="./images/banners/app-1@2x.png" width="262" height="167" alt="">
                 </picture>
               </div>
               <div class="banners__img banners__img--2">
                 <picture>
-                  <img src="./images/banners/app-2.png" srcset="./images/banners/app-2@2x.png" width="305" height="644" alt="">
+                  <img src="./images/banners/app-2.png" srcset="./images/banners/app-2@2x.png" width="226" height="479" alt="">
                 </picture>
               </div>
               <div class="banners__img banners__img--3">
                 <picture>
-                  <img src="./images/banners/app-3.png" srcset="./images/banners/app-3@2x.png" width="315" height="100" alt="">
+                  <img src="./images/banners/app-3.png" srcset="./images/banners/app-3@2x.png" width="267" height="92" alt="">
                 </picture>
               </div>
               <div class="banners__img banners__img--4">
                 <picture>
-                  <img src="./images/banners/app-4.png" srcset="./images/banners/app-4@2x.png" width="308" height="644" alt="">
+                  <img src="./images/banners/app-4.png" srcset="./images/banners/app-4@2x.png" width="229" height="479" alt="">
                 </picture>
               </div>
               <div class="banners__img banners__img--5">
@@ -391,20 +396,20 @@
               </div>
               <div class="banners__img banners__img--6">
                 <picture>
-                  <img src="./images/banners/app-6.png" srcset="./images/banners/app-6@2x.png" width="80" height="80" alt="">
+                  <img src="./images/banners/app-6.png" srcset="./images/banners/app-6@2x.png" width="90" height="90" alt="">
                 </picture>
               </div>
             </div>
           </li>
-          <li class="banners__slide banners__slide--realty is-active" data-id="1">
+          <li class="banners__slide banners__slide--realty" data-id="3">
             <div class="banners__slide-text">
               <h2 class="banners__label label">недвижимость</h2>
-              <div class="banners__slogan slogan">
-                <div class="slogan__string slogan__string--1">
+              <div class="banners__title">
+                <div class="banners__title-string">
                   <p>Формируем</p>
                   <img src="./images/icon-line.svg" width="44" height="35" alt="">
                 </div>
-                <div class="slogan__string slogan__string--2">
+                <div class="banners__title-string">
                   <picture>
                     <img src="./images/icon-heart.png" width="44" height="44" alt="">
                   </picture>
@@ -414,7 +419,7 @@
                   </picture>
                   <p>ЖК</p>
                 </div>
-                <div class="slogan__string slogan__string--3">
+                <div class="banners__title-string">
                   <div>
                     <img src="./images/icon-planet.svg" width="30" height="30" alt="">
                   </div>
@@ -444,6 +449,59 @@
               <div class="banners__img banners__img--4">
                 <picture>
                   <img src="./images/banners/realty-4.png" srcset="./images/banners/realty-4@2x.png" width="374" height="296" alt="">
+                </picture>
+              </div>
+            </div>
+          </li>
+          <li class="banners__slide banners__slide--app" data-id="4">
+            <div class="banners__slide-text">
+              <h2 class="banners__label label">Mobile App</h2>
+              <div class="banners__title">
+                <div class="banners__title-string">
+                  <p>Проектируем</p>
+                </div>
+                <div class="banners__title-string">
+                  <div>
+                    <img src="./images/icon-phone.svg" width="19" height="24" alt="">
+                  </div>
+                  <p>мобильные</p>
+                </div>
+                <div class="banners__title-string">
+                  <p>приложения</p>
+                </div>
+              </div>
+              <p>Разрабатываем приложения для мобильных устройств, решая реальные запросы пользователей.</p>
+              <button class="banners__button button" type="button">Подробнее</button>
+            </div>
+            <div class="banners__slide-pictures banners__slide-pictures--app">
+              <div class="banners__img banners__img--1">
+                <picture>
+                  <img src="./images/banners/app-1.png" srcset="./images/banners/app-1@2x.png" width="262" height="167" alt="">
+                </picture>
+              </div>
+              <div class="banners__img banners__img--2">
+                <picture>
+                  <img src="./images/banners/app-2.png" srcset="./images/banners/app-2@2x.png" width="226" height="479" alt="">
+                </picture>
+              </div>
+              <div class="banners__img banners__img--3">
+                <picture>
+                  <img src="./images/banners/app-3.png" srcset="./images/banners/app-3@2x.png" width="267" height="92" alt="">
+                </picture>
+              </div>
+              <div class="banners__img banners__img--4">
+                <picture>
+                  <img src="./images/banners/app-4.png" srcset="./images/banners/app-4@2x.png" width="229" height="479" alt="">
+                </picture>
+              </div>
+              <div class="banners__img banners__img--5">
+                <picture>
+                  <img src="./images/banners/app-5.png" srcset="./images/banners/app-5@2x.png" width="140" height="40" alt="">
+                </picture>
+              </div>
+              <div class="banners__img banners__img--6">
+                <picture>
+                  <img src="./images/banners/app-6.png" srcset="./images/banners/app-6@2x.png" width="90" height="90" alt="">
                 </picture>
               </div>
             </div>

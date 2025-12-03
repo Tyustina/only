@@ -7,6 +7,11 @@
   padding-bottom: size(10px);
   border-bottom: 1px solid v.$light-grey;
 
+  @include vp-1023 {
+    padding-top: 16px;
+    padding-bottom: 17px;
+  }
+
   &__container {
     @include m.container;
     display: flex;
@@ -23,6 +28,11 @@
     img {
       width: size(73px);
       height: size(24px);
+
+      @include vp-1023 {
+        width: 55px;
+        height: 18px;
+      }
 
       @include vp-767 {
         width: 52px;
@@ -42,6 +52,7 @@
       border: none;
       background-color: transparent;
       z-index: 10;
+      margin-right: -4px;
 
       span {
         position: relative;

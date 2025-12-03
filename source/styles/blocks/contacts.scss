@@ -9,6 +9,10 @@
   gap: 4px;
   color: v.$default-black;
 
+  @include vp-1023 {
+    gap: 0;
+  }
+
   &__item {
     &:last-child {
       margin-top: size(34px);

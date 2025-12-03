@@ -5,8 +5,8 @@
     @include container;
     display: grid;
     grid-template-columns: 53% 47%;
-    row-gap: 80px;
-    padding-top: 38px;
+    row-gap: size(80px);
+    padding-top: size(38px);
 
     &__button {
         grid-area: 1/1/2/2;
