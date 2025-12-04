@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <title>Only.digital</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preload" href="#" type="font/woff2" as="font">
+  <link rel="preload" href="./fonts/tt-commons-pro-trial-medium.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="./fonts/tt-commons-pro-trial-regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="./fonts/tt-runs-trial-bold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="./fonts/tt-runs-trial-demibold.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="./fonts/tt-runs-trial-medium.woff2" type="font/woff2" as="font">
+
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/main.js" defer></script>
 </head>
@@ -420,20 +425,24 @@
               <div class="banners__title">
                 <div class="banners__title-string">
                   <p>Формируем</p>
-                  <img src="./images/icon-line.svg" width="44" height="35" alt="">
+                  <img class="banners__icon--line" src="./images/icon-line.svg" width="44" height="35" alt="">
                 </div>
                 <div class="banners__title-string">
-                  <picture>
-                    <img src="./images/icon-heart.png" width="44" height="44" alt="">
-                  </picture>
-                  <p>ценность </p>
-                  <picture>
-                    <img src="./images/icon-town.png" width="44" height="44" alt="">
-                  </picture>
+                  <div class="banners__icon--heart">
+                    <picture>
+                      <img src="./images/icon-heart.png" width="44" height="44" alt="">
+                    </picture>
+                  </div>
+                  <p>ценность бренда</p>
+                  <div class="banners__icon--town">
+                    <picture>
+                      <img src="./images/icon-town.png" width="44" height="44" alt="">
+                    </picture>
+                  </div>
                   <p>ЖК</p>
                 </div>
                 <div class="banners__title-string">
-                  <div>
+                  <div class="banners__icon--planet">
                     <img src="./images/icon-planet.svg" width="30" height="30" alt="">
                   </div>
                   <span>в digital - среде</span>
