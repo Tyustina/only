@@ -3,12 +3,17 @@
 
 .banners {
     @include m.container;
+    display: grid;
     width: 100%;
     padding-top: size(75px);
     overflow: hidden;
 
     @include vp-1023 {
         padding-top: 54px;
+    }
+
+    @include vp-767 {
+        display: none;
     }
 
     &__wrapper {

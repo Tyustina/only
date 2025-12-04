@@ -12,6 +12,12 @@
         padding-top: 26px;
     }
 
+    @include vp-767 {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 0;
+    }
+
     &__button {
         grid-area: 1/1/2/2;
         margin-bottom: auto;
@@ -24,6 +30,12 @@
             padding-left: 47px;
             padding-right: 46px;
         }
+
+        @include vp-767 {
+            grid-area: 1/1/2/2;
+            padding-bottom: 14px;
+            width: 100%;
+        }
     }
 
     &__socials {
@@ -31,6 +43,10 @@
         align-self: center;
         margin-top: auto;
         margin-bottom: 6px;
+
+        @include vp-767 {
+            grid-area: 3/1/4/2;
+        }
     }
 
     &__copyright {
@@ -43,6 +59,10 @@
 
         @include vp-1023 {
             font-size: 15px;
+        }
+
+        @include vp-767 {
+            font-size: 13px;
         }
     }
 
@@ -60,6 +80,10 @@
             grid-template-columns: 1fr 1fr;
             row-gap: 10px;
             column-gap: 40px;
+        }
+
+        @include vp-767 {
+            display: none;
         }
     }
 
@@ -148,9 +172,22 @@
                     font-weight: 500;
                     font-size: 24px;
                 }
+
                 p {
                     margin-bottom: 5px;
                 }
+            }
+        }
+
+        @include vp-767 {
+            grid-area: 2/1/3/2;
+            gap: 12px;
+            margin-top: 15px;
+            margin-bottom: 14px;
+            margin-left: 0px;
+
+            li:last-child {
+                margin-top: 10px;
             }
         }
     }
@@ -166,6 +203,11 @@
             row-gap: 16px;
             margin-top: 40px;
         }
+
+        @include vp-767 {
+            grid-area: 4/1/5/2;
+            row-gap: 4px;
+        }
     }
 
     &__presentation {
@@ -179,6 +221,10 @@
             span {
                 margin-left: 6px;
             }
+        }
+
+        @include vp-767 {
+            display: none;
         }
     }
 
@@ -200,6 +246,11 @@
             @include vp-1023 {
                 font-size: 46px;
             }
+
+            @include vp-767 {
+                font-size: 50px;
+                margin: -2px 0px 0px 2px;
+            }
         }
 
         span {
@@ -213,6 +264,10 @@
             @include vp-1023 {
                 font-size: 15px;
                 margin-left: 4px;
+            }
+
+            @include vp-767 {
+                margin-top: 4px;
             }
         }
     }
