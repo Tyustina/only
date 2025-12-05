@@ -1,7 +1,7 @@
 @use "../common/variables.scss" as v;
 @use "../common/mixin.scss" as m;
 
-.project-card {
+.portfolio-card {
   display: flex;
   flex-direction: column;
   gap: size(24px);

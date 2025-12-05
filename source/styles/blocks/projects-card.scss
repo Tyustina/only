@@ -1,0 +1,54 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.projects-card {
+    display: flex;
+    border-radius: 30px;
+    padding: 30px;
+    width: 330px;
+    min-height: 320px;
+    background-color: $default-white;
+
+    &__list {
+        @include m.list-reset;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        li {
+            border: 2.50px solid $default-white70;
+            border-radius: 12px;
+            width: 64px;
+            height: 64px;
+            background-color: $default-white;
+        }
+    }
+
+    span {
+        font-family: $ff-second;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        opacity: 0.6;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 125%;
+        letter-spacing: -0.03em;
+        margin: 0;
+    }
+
+    p {
+        font-family: $ff-second;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        margin: 0;
+        opacity: 0.6;
+
+    }
+}

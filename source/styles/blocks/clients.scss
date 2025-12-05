@@ -1,0 +1,288 @@
+@use "../common/variables.scss" as v;
+@use "../common/mixin.scss" as m;
+
+.clients {
+    @include m.container;
+    padding-top: size(100px);
+
+    p {
+        font-weight: 600;
+        font-size: size(24px);
+        line-height: 120%;
+        margin: 0;
+        letter-spacing: -0.03em;
+        margin-bottom: size(70px);
+        text-align: center;
+
+        @include vp-767 {
+            display: none
+        }
+    }
+
+    &__list {
+        @include m.list-reset;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 0 size(82px);
+
+        @include vp-1023 {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 41px;
+        }
+
+        @include vp-767 {
+            padding: 0 6px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: size(215px);
+        min-height: size(180px);
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 306px;
+            height: 306px;
+            background-color: $default-white;
+            border-radius: 100%;
+            transform: scale(0);
+            transition: transform 0.3s ease-in;
+            z-index: -1;
+
+            @include vp-1023 {
+
+            }
+        }
+
+        @include vp-1023 {
+            min-height: 150px;
+        }
+
+        @include vp-767 {
+            min-width: 111px;
+            min-height: 100px;
+        }
+
+        &:hover::before {
+            transform: scale(1);
+        }
+    }
+
+    &__item--severstal {
+        width: size(162px);
+        height: size(52px);
+
+        @include vp-1023 {
+            width: 141px;
+            height: 45px;
+        }
+
+        @include vp-767 {
+            width: 90px;
+            height: 29px;
+        }
+    }
+
+    &__item--sibur {
+        width: size(123px);
+        height: size(24px);
+
+        @include vp-1023 {
+            width: 108px;
+            height: 20px;
+        }
+
+        @include vp-767 {
+            width: 69px;
+            height: 13px;
+        }
+    }
+
+    &__item--tek {
+        width: size(156px);
+        height: size(36px);
+
+        @include vp-1023 {
+            width: 132px;
+            height: 31px;
+        }
+
+        @include vp-767 {
+            width: 83px;
+            height: 19px;
+        }
+    }
+
+    &__item--rosatom {
+        width: size(125px);
+        height: size(56px);
+
+        @include vp-1023 {
+            width: 117px;
+            height: 48px;
+        }
+
+        @include vp-767 {
+            width: 74px;
+            height: 30px;
+        }
+    }
+
+    &__item--nlmk {
+        width: size(107px);
+        height: size(60px);
+
+        @include vp-1023 {
+            width: 109px;
+            height: 50px;
+        }
+
+
+        @include vp-767 {
+            width: 69px;
+            height: 32px;
+        }
+    }
+
+    &__item--rosteh {
+        width: size(123px);
+        height: size(24px);
+
+        @include vp-1023 {
+            width: 126px;
+            height: 39px;
+        }
+
+        @include vp-767 {
+            width: 80px;
+            height: 25px;
+        }
+    }
+
+    &__item--uralhim {
+        width: size(155px);
+        height: size(20px);
+
+        @include vp-1023 {
+            width: 156px;
+        }
+
+        @include vp-767 {
+            width: 99px;
+            height: 13px;
+        }
+    }
+
+    &__item--schlumberger {
+        width: size(129px);
+        height: size(29px);
+
+        @include vp-1023 {
+            width: 130px;
+            height: 29px;
+        }
+
+        @include vp-767 {
+            width: 82px;
+            height: 18px;
+        }
+    }
+
+    &__item--mrgroup {
+        width: size(127px);
+        height: size(28px);
+
+        @include vp-1023 {
+            width: 129px;
+        }
+
+        @include vp-767 {
+            width: 82px;
+            height: 18px;
+        }
+    }
+
+    &__item--coldy {
+        width: size(109px);
+        height: size(18px);
+
+        @include vp-1023 {
+            width: 113px;
+        }
+
+        @include vp-767 {
+            width: 72px;
+            height: 12px;
+        }
+    }
+
+    &__item--glavstroy {
+        width: size(170px);
+        height: size(21px);
+
+        @include vp-1023 {
+            width: 171px;
+            height: 20px;
+        }
+
+        @include vp-767 {
+            width: 107px;
+            height: 112px;
+        }
+    }
+
+    &__item--vk {
+        width: size(52px);
+        height: size(52px);
+
+        @include vp-767 {
+            width: 32px;
+            height: 34px;
+        }
+    }
+
+    &__item--otkrytie {
+        width: size(154px);
+        height: size(30px);
+
+        @include vp-767 {
+            width: 98px;
+            height: 19px;
+        }
+    }
+
+    &__item--sber {
+        width: size(102px);
+        height: size(18px);
+
+        @include vp-1023 {
+            width: 109px;
+            height: 20px;
+        }
+
+        @include vp-767 {
+            width: 69px;
+            height: 12px;
+        }
+    }
+
+    &__item--pharmstandart {
+        width: size(133px);
+        height: size(30px);
+
+        @include vp-1023 {
+            width: 135px;
+            height: 31px;
+        }
+
+        @include vp-767 {
+            width: 85px;
+            height: 20px;
+        }
+    }
+}

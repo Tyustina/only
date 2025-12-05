@@ -7,7 +7,7 @@ $green: #00ffa9;
 $dark-green: #04251a;
 $light-base: #f1f1f1;
 
-
+$default-white70: rgba(255, 255, 255, 0.7);
 /*Viewport*/
 $vp-1440: 1440px;
 $vp-1280: 1280px;
@@ -17,6 +17,6 @@ $vp-375: 375px;
 
 /*Fonts*/
 
-$ff-default: "TT-Runs",sans-serif;
-$ff-second: "TT-Commons",sans-serif;
+$ff-default: "TT-Runs", sans-serif;
+$ff-second: "TT-Commons", sans-serif;
 $fz-default: 16px;

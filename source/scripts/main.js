@@ -1,6 +1,5 @@
 import './modules/nav.js'
 // import { scaleVideo } from './modules/video.js';
-import { movingParagraph } from './modules/projects.js';
 import { switchingNav } from './modules/nav.js';
 import { flippingBanners } from './modules/banners.js';
 window.addEventListener('DOMContentLoaded', () => {
@@ -8,5 +7,3 @@ window.addEventListener('DOMContentLoaded', () => {
     switchingNav();
     flippingBanners();
 });
-
-window.addEventListener('resize',movingParagraph);

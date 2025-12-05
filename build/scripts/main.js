@@ -40,16 +40,6 @@ function openNav() {
 }
 window.addEventListener("resize", switchingNav);
 
-// source/scripts/modules/projects.js
-var textBlock = document.querySelector(".projects__text");
-var paragraph = document.querySelector(".hero__about p");
-isMobile = window.innerWidth < 768;
-function movingParagraph() {
-  if (isMobile) {
-    textBlock.appendChild(paragraph);
-  }
-}
-
 // source/scripts/modules/banners.js
 var bannersList = document.querySelector(".banners__wrapper");
 var switchBanner = (toggle) => {
@@ -84,5 +74,4 @@ window.addEventListener("DOMContentLoaded", () => {
   switchingNav();
   flippingBanners();
 });
-window.addEventListener("resize", movingParagraph);
 //# sourceMappingURL=main.js.map
