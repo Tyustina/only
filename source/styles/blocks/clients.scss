@@ -46,8 +46,8 @@
         &::before {
             content: "";
             position: absolute;
-            width: 306px;
-            height: 306px;
+            width: size(306px);
+            height: size(306px);
             background-color: $default-white;
             border-radius: 100%;
             transform: scale(0);

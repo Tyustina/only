@@ -2,44 +2,212 @@
 @use "../common/mixin.scss" as m;
 
 .awards {
-  &__list {
-    @include m.list-reset;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: size(10px);
-  }
+    @include m.container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid $light-grey;
+    padding-bottom: size(130px);
+    row-gap: size(80px);
 
-  &__link {
-    display: flex;
-    place-items: center;
-    gap: size(11px);
-    text-decoration: none;
-
-    p {
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 110%;
-      letter-spacing: -0.04em;
-      text-align: center;
-      padding: 0;
-      color: v.$default-black;
-      opacity: 0.8;
+    &__title {
+        padding-top: size(40px);
     }
 
-    span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: size(12px);
-      width: size(48px);
-      height: size(48px);
-      background-color: v.$default-white;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: size(24px);
+        padding-left: size(40px);
+        padding-top: size(40px);
+        border-left: 1px solid $light-grey;
 
-      img {
-        width: size(var(--w));
-        height: size(var(--h));
-      }
+        p {
+            font-family: $ff-second;
+            font-weight: 400;
+            font-size: size(16px);
+            line-height: 140%;
+            letter-spacing: -0.02em;
+            margin: 0;
+            opacity: 0.6;
+        }
+
+        p:first-child {
+            font-family: $ff-default;
+            font-weight: 600;
+            font-size: size(26px);
+            line-height: 120%;
+            letter-spacing: -0.03em;
+            opacity: 1;
+        }
     }
-  }
+
+    &__progress {
+        @include m.list-reset;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: size(24px);
+
+        @include vp-1023 {
+            gap: 15px;
+        }
+
+        a {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-weight: 600;
+                font-size: size(56px);
+                line-height: 90%;
+                letter-spacing: -0.03em;
+                margin: 0;
+                opacity: 0.4;
+                margin-right: size(20px);
+                transition: opacity 0.3s ease-in;
+
+                @include vp-1023 {
+                    font-size: 32px;
+                    opacity: 1;
+                }
+
+                &:last-child {
+                    margin-right: size(25px);
+                }
+            }
+
+            span {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s ease-in;
+                width: 0px;
+                height: size(50px);
+                opacity: 0;
+
+                @include vp-1023 {
+                   display: none;
+                }
+
+                img {
+                    z-index: 2;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: size(15px);
+                    width: 0px;
+                    height: size(70px);
+                    background-color: $green;
+                    opacity: 0;
+                }
+            }
+
+            sup {
+                font-family: $ff-second;
+                font-weight: 500;
+                font-size: size(16px);
+                line-height: 120%;
+                letter-spacing: -0.03em;
+                text-transform: lowercase;
+                margin-bottom: auto;
+                opacity: 0.6;
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                }
+
+                span {
+                    width: size(70px);
+                    margin-right: size(20px);
+                    opacity: 1;
+
+                    &::before {
+                        width: size(70px);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__list {
+        @include m.container;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: size(20px);
+
+        @include vp-1023 {
+            gap: 15px;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: size(10px);
+            width: size(330px);
+            height: size(300px);
+            border-radius: 30px;
+            padding: size(30px);
+            background-color: $default-white;
+
+            @include vp-1023 {
+                border-radius: 20px;
+                padding: 20px;
+                width: 170px;
+                height: 170px;
+                gap: 4px;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: size(26px);
+                line-height: 120%;
+                letter-spacing: -0.03em;
+
+                @include vp-1023 {
+                    font-size: 20px;
+                }
+            }
+
+            h3 {
+                font-family: $ff-second;
+                font-weight: 500;
+                font-size: size(15px);
+                line-height: 130%;
+                letter-spacing: -0.02em;
+                margin: 0;
+                opacity: 0.6;
+
+                @include vp-1023 {
+                    font-size: 15px;
+                    margin-top: 4px;
+                }
+            }
+
+            p {
+                font-weight: 600;
+                font-size: size(14px);
+                line-height: 120%;
+                letter-spacing: -0.03em;
+                text-transform: lowercase;
+                margin: 0;
+                margin-top: auto;
+
+                @include vp-1023 {
+                    font-size: 12px;
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
