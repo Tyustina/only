@@ -8,7 +8,6 @@
   row-gap: size(24px);
   border-top: 1px solid v.$light-grey;
   margin-top: size(66px);
-  padding-top: size(40px);
 
   @include vp-1279 {
     row-gap: size(20px);
@@ -25,41 +24,43 @@
     overflow: hidden;
   }
 
-  &__desk {
+  &__text-wrapper {
     grid-area: 1/2/2/3;
+    display: grid;
+    row-gap: 24px;
+    padding-left: size(40px);
+    padding-top: size(40px);
+    border-left: 1px solid v.$light-grey;
+
+    @include vp-1279 {
+      padding-left: size(20px);
+    }
+  }
+
+  &__desk {
     font-weight: 600;
     font-size: size(26px);
     line-height: 120%;
     letter-spacing: -0.03em;
     margin: 0;
-    margin-left: size(40px);
 
     @include vp-1279 {
       font-size: size(20px);
-      margin-left: size(20px);
-    }
-
-    @include vp-767 {
-      margin: 0;
     }
   }
 
   &__text {
-    grid-area: 2/2/3/3;
     width: 80%;
     display: grid;
     gap: size(5px);
-    margin-left: size(40px);
     opacity: 0.6;
 
     @include vp-1279 {
       width: 100%;
-      margin-left: size(20px);
     }
 
     @include vp-767 {
       gap: 6px;
-      margin: 0;
     }
 
     p {
@@ -81,8 +82,9 @@
     }
   }
 
-  &__label {
+  &__title {
     grid-area: 1/1/2/2;
+    padding-top: size(40px);
 
     @include vp-767 {
       padding-top: 76px;
@@ -90,7 +92,7 @@
   }
 
   &__wrapper {
-    grid-area: 3/1/4/3;
+    grid-area: 2/1/3/3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;

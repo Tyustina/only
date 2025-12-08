@@ -26,9 +26,7 @@
         }
 
         &:hover {
-            @include only-desktop {
-                background-color: $green;
-            }
+            background-color: $green;
         }
     }
 

@@ -9,13 +9,8 @@
   height: 100%;
   cursor: pointer;
 
-  @include vp-1279 {
-    gap: size(20px);
-  }
-
   @include vp-767 {
     width: 315px;
-
     flex-shrink: 0;
     scroll-snap-align: center;
     cursor: grab;
@@ -32,22 +27,12 @@
     img {
       width: size(447px);
       height: size(450px);
-      transition: transform 0.5s ease-in, object-position 0.5s ease-in;
 
       @include vp-1279 {
-        width: 100%;
+        width: 100vw;
         height: auto;
       }
     }
-
-    @include vp-1279 {
-      border-radius: size(20px);
-    }
-
-    // @include vp-767 {
-    //   width: 315px;
-    //   height: 315px;
-    // }
   }
 
   &__content {
@@ -88,11 +73,11 @@
   }
 
   &:hover {
-    .project-card__img {
+    .portfolio-card__img {
       transform: scale(1.05);
-      border-radius: size(65px);
+      border-radius: size(45px);
 
-      @include vp-767 {
+      @include vp-1279 {
         transform: none;
         border-radius: unset;
       }
@@ -101,8 +86,9 @@
     img {
       transform: scale(1.05) translate(5px, -5px);
 
-      @include vp-767 {
+      @include vp-1279 {
         transform: none;
+        border-radius: unset;
       }
     }
   }

@@ -5,7 +5,8 @@
     @include m.container;
     display: grid;
     width: 100%;
-    padding-top: size(75px);
+    padding-top: size(60px);
+    padding-bottom: size(130px);
     overflow: hidden;
 
     @include vp-1279 {
@@ -94,9 +95,10 @@
         }
     }
 
-    &__label {
+    &__title {
         font-weight: 600;
         font-family: $ff-default;
+        font-size: size(14px);
     }
 
     p:not(.banners__desk p) {
@@ -155,6 +157,10 @@
             &:last-child {
                 margin: 0;
             }
+        }
+
+        p {
+            margin-top: 4px;
         }
 
         span {
@@ -353,6 +359,17 @@
             height: 207px;
             top: 49px;
             right: -23px;
+        }
+    }
+
+    &__slide-pictures--realty>&__img--5 {
+        width: size(62px);
+        height: size(50px);
+        top: size(384px);
+        right: size(149px);
+
+        @include vp-1279 {
+            display: none;
         }
     }
 

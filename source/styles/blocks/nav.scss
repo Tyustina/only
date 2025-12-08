@@ -71,6 +71,7 @@
     color: v.$default-black;
     letter-spacing: -0.03em;
     text-transform: lowercase;
+    transition: opacity 0.3s ease-in;
 
     @include vp-1279 {
       font-size: 24px;
@@ -80,7 +81,7 @@
     &:hover,
     &:focus,
     &:active {
-      opacity: 0.8;
+      opacity: 0.6;
     }
   }
 
@@ -101,6 +102,12 @@
     @include vp-767 {
       display: none;
     }
+
+    &:hover {
+      @include only-desktop {
+        opacity: 0.6;
+      }
+    }
   }
 
   &__button-count {
@@ -113,10 +120,15 @@
   }
 
   &__button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 12px;
     width: size(36px);
     height: size(36px);
     background-color: v.$default-black;
+    cursor: pointer;
+
   }
 
   &__contacts {

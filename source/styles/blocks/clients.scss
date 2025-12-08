@@ -3,15 +3,16 @@
 
 .clients {
     @include m.container;
-    padding-top: size(100px);
+    padding-top: size(125px);
+    padding-bottom: size(132px);
 
     p {
         font-weight: 600;
-        font-size: size(24px);
+        font-size: size(26px);
         line-height: 120%;
         margin: 0;
         letter-spacing: -0.03em;
-        margin-bottom: size(70px);
+        margin-bottom: size(78px);
         text-align: center;
 
         @include vp-767 {
@@ -22,7 +23,7 @@
     &__list {
         @include m.list-reset;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5,size(250px));
         padding: 0 size(82px);
 
         @include vp-1279 {

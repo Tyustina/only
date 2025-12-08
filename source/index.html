@@ -20,7 +20,7 @@
   <header class="header">
     <div class="header__container">
       <div class="header__logo">
-        <img src="./images/logo.svg" width="73" height="24" alt="Логотип компании.">
+        <img src="./images/svg/logo.svg" width="73" height="24" alt="Логотип компании.">
       </div>
       <div class="header__nav">
         <button class="header__toggle" type="button" aria-label="Открыть навигацию.">
@@ -30,7 +30,7 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="">Проекты</a>
+              <a class="nav__link" href="#project">Проекты</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="">Компания</a>
@@ -64,7 +64,9 @@
           </ul>
           <button class="nav__button">
             <span class="nav__button-count">40</span>
-            <span class="nav__button-icon"></span>
+            <span class="nav__button-icon">
+              <img src="../icons/stack.svg#star" width="20" height="20" alt="">
+            </span>
           </button>
           <ul class="nav__contacts contacts">
             <li class="contacts__item">
@@ -149,9 +151,8 @@
           </li>
           <li class="contacts__item">
             <p>telegram для связи</p>
-            <img src="./" alt="">
             <a class="contacts__link" href="https://t.me/onlydigitalagency">@onlydigitalagency</a>
-            <img src="./images/svg/tg-icon.svg" width="14" height="14" alt="">
+            <img src="../icons/stack.svg#telegram" width="14" height="14" alt="">
 
           </li>
         </ul>
@@ -171,13 +172,15 @@
     </section>
     <section class="portfolio">
       <h2 class="portfolio__title title">Проекты</h2>
-      <p class="portfolio__desk">Аналитика, брендинг<br>и разработка для B2B</p>
-      <div class="portfolio__text">
-        <p>Only &mdash; digital- агентство с фокусом на сильную аналитику, дизайн и разработку. В основе наших
-          проектов лежат
-          идеи, создаваемые на стыке стратегии, креатива и технологий.</p>
-        <p>Обеспечиваем компании лучшими техническими и дизайн-решениями, создавая
-          digital-проекты.</p>
+      <div class="portfolio__text-wrapper">
+        <p class="portfolio__desk">Аналитика, брендинг<br>и разработка для B2B</p>
+        <div class="portfolio__text">
+          <p>Only &mdash; digital- агентство с фокусом на сильную аналитику, дизайн и разработку. В основе наших
+            проектов лежат
+            идеи, создаваемые на стыке стратегии, креатива и технологий.</p>
+          <p>Обеспечиваем компании лучшими техническими и дизайн-решениями, создавая
+            digital-проекты.</p>
+        </div>
       </div>
       <div class="portfolio__wrapper">
         <div class="portfolio__list ">
@@ -186,7 +189,11 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/sibur.png" srcset="images/sibur@2x.png" width="447" height="450"  alt="Сибур.">
+                  <source type="image/webp"
+                    srcset="./images/portfolio/sibur.webp 1x, ./images/portfolio/sibur@2x.webp 2x" width="447"
+                    height="450">
+                  <img src="./images/portfolio/sibur.png" srcset="./images/portfolio/sibur.png" width="447" height="450"
+                    alt="Сибур.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -197,7 +204,11 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/mr-group.png" srcset="images/mr-group@2x.png" width="447" height="450" alt="MR group.">
+                  <source type="image/webp"
+                    srcset="./images/portfolio/mr-group.webp 1x, ./images/portfolio/mr-group@2x.webp 2x" width="447"
+                    height="450">
+                  <img src="./images/portfolio/mr-group.png" srcset="./images/portfolio/mr-group@2x.png" width="447"
+                    height="450" alt="MR group.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -208,7 +219,11 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/severstal.png" srcset="images/severstal@2x.png" width="447" height="450" alt="Северсталь.">
+                  <source type="image/webp"
+                    srcset="./images/portfolio/severstal.webp 1x, ./images/portfolio/severstal@2x.webp" width="447"
+                    height="450">
+                  <img src="./images/portfolio/severstal.png" srcset="./images/portfolio/severstal@2x.png" width="447"
+                    height="450" alt="Северсталь.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -224,7 +239,11 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/whoosh.png" srcset="images/whoosh@2x.png" width="447" height="450" alt="WHOOSH.">
+                  <source type="image/webp"
+                    srcset="./images/portfolio/whoosh.webp 1x, ./images/portfolio/whoosh@2x.webp 2x" width="447"
+                    height="450">
+                  <img src="./images/portfolio/whoosh.png" srcset="./images/portfolio/whoosh@2x.png" width="447"
+                    height="450" alt="WHOOSH.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -235,7 +254,10 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/nlmk.png" srcset="images/nlmk@2x.png" width="447" height="450" alt="R&D-центра НЛМК.">
+                  <source type="image/webp" srcset="./images/portfolio/nlmk.webp 1x, ./images/portfolio/nlmk@2x.webp 2x"
+                    width="447" height="450">
+                  <img src="./images/portfolio/nlmk.png" srcset="./images/portfolio/nlmk@2x.png" width="447"
+                    height="450" alt="R&D-центра НЛМК.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -246,7 +268,10 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/new.png" srcset="images/new@2x.png" width="447" height="450" alt="Новые академики.">
+                  <source type="image/webp" srcset="./images/portfolio/new.webp 1x, ./images/portfolio/new@2x.webp 2x"
+                    width="447" height="450">
+                  <img src="./images/portfolio/new.png" srcset="./images/portfolio/new@2x.png" width="447" height="450"
+                    alt="Новые академики.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -262,7 +287,11 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/ashtau.png" srcset="images/ashtau@2x.png" width="447" height="450" alt="Аш-Тау.">
+                  <source type="image/webp"
+                    srcset="./images/portfolio/ashtau.webp 1x, ./images/portfolio/ashtau@2x.webp 2x" width="447"
+                    height="450">
+                  <img src="./images/portfolio/ashtau.png" srcset="./images/portfolio/ashtau@2x.png" width="447"
+                    height="450" alt="Аш-Тау.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -273,7 +302,11 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/uralhim.png" srcset="images/uralhim@2x.png" width="447" height="450" alt="Уралхим.">
+                  <source type="image/webp"
+                    srcset="./images/portfolio/uralhim.webp 1x, ./images/portfolio/uralhim@2x.webp 2x" width="447"
+                    height="450">
+                  <img src="./images/portfolio/uralhim.png" srcset="./images/portfolio/uralhim@2x.png" width="447"
+                    height="450" alt="Уралхим.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -284,7 +317,11 @@
             <a href="#" class="portfolio-card">
               <div class="portfolio-card__img">
                 <picture>
-                  <img src="images/pay.png" srcset="images/pay@2x.png" width="447" height="450" alt="Плати частями.">
+                  <source type="image/webp" srcset="./images/portfolio/pay.webp 1x, ./images/portfolio/pay@2x.webp 2x"
+                    width="447" height="450">
+
+                  <img src="./images/portfolio/pay.png" srcset="./images/portfolio/pay@2x.png" width="447" height="450"
+                    alt="Плати частями.">
                 </picture>
               </div>
               <div class="portfolio-card__content">
@@ -313,12 +350,12 @@
         </li>
         <li class="clients__item clients__item--uralhim">
           <a href="">
-            <img src="./images/svg/uralhim.svg" width="155" height="20" alt="Уралхим.">
+            <img src="./images/svg/uralhim.svg" width="185" height="23" alt="Уралхим.">
           </a>
         </li>
         <li class="clients__item clients__item--rosteh">
           <a href="">
-            <img src="./images/svg/rosteh.svg" width="123" height="24" alt="Ростех.">
+            <img src="./images/svg/rosteh.svg" width="150" height="45" alt="Ростех.">
           </a>
         </li>
         <li class="clients__item clients__item--nlmk">
@@ -338,53 +375,57 @@
         </li>
         <li class="clients__item clients__item--pharmstandart">
           <a href="">
-            <img src="./images/svg/farmstandart.svg" width="133" height="30" alt="Фармстандарт.">
+            <img src="./images/svg/farmstandart.svg" width="160" height="36" alt="Фармстандарт.">
           </a>
         </li>
         <li class="clients__item clients__item--schlumberger">
           <a href="">
-            <img src="./images/svg/shlumberger.svg" width="129" height="29" alt="Schlumberger.">
+            <img src="./images/svg/shlumberger.svg" width="153" height="35" alt="Schlumberger.">
           </a>
         </li>
         <li class="clients__item clients__item--sber">
           <a href="">
-            <img src="./images/svg/sibur.svg" width="102" height="18" alt="Сбер.">
+            <img src="./images/svg/sber.svg" width="134" height="22" alt="Сбер.">
           </a>
         </li>
         <li class="clients__item clients__item--vk">
           <a href="">
-            <img src="./images/svg/vk.svg" width="52" height="52" alt="Вконтакте.">
+            <img src="./images/svg/vk.svg" width="63" height="63" alt="Вконтакте.">
           </a>
         </li>
         <li class="clients__item clients__item--otkrytie">
           <a href="">
-            <img src="./images/svg/otkrytie.svg" width="154" height="30" alt="Открытие.">
+            <img src="./images/svg/otkrytie.svg" width="185" height="36" alt="Открытие.">
           </a>
         </li>
         <li class="clients__item clients__item--mrgroup">
           <a href="">
-            <img src="./images/svg/mr-group.svg" width="127" height="28" alt="MR-Group.">
+            <img src="./images/svg/mr-group.svg" width="146" height="32" alt="MR-Group.">
           </a>
         </li>
         <li class="clients__item clients__item--coldy">
           <a href="">
-            <img src="./images/svg/coldy.svg" width="109" height="18" alt="Coldy.">
+            <img src="./images/svg/coldy.svg" width="120" height="20" alt="Coldy.">
           </a>
         </li>
         <li class="clients__item clients__item--glavstroy">
           <a href="">
-            <img src="./images/svg/glavstroy.svg" width="170" height="21" alt="Главстрой.">
+            <img src="./images/svg/glavstroy.svg" width="193" height="24" alt="Главстрой.">
           </a>
         </li>
       </ul>
     </section>
-    <section class="projects">
+    <section class="projects" id="project">
       <div class="projects__container">
         <h2 class="projects__title title">Крупные проекты</h2>
         <p>Поддерживаем и развиваем долгосрочное сотрудничество</p>
         <div class="projects__buttons">
-          <button class="projects__button projects__button--prev" type="button"></button>
-          <button class="projects__button projects__button--next" type="button"></button>
+          <button class="projects__button projects__button--prev" type="button">
+            <img src="../icons/stack.svg#arrow-prev" width="20" height="20" alt="">
+          </button>
+          <button class="projects__button projects__button--next" type="button">
+            <img src="../icons/stack.svg#arrow-next" width="20" height="20" alt="">
+          </button>
         </div>
       </div>
       <div class="projects__slider-container">
@@ -394,33 +435,45 @@
               <ul class="projects-card__list">
                 <li>
                   <picture>
-                    <img src="./images/projects/severstal-1.png" srcset="./images/projects/severstal-1@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/severstal-1.webp 1x, ./images/projects/severstal-1@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/severstal-1.png" srcset="./images/projects/severstal-1@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/severstal-2.png" srcset="./images/projects/severstal-2@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/severstal-2.webp 1x, ./images/projects/severstal-2@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/severstal-2.png" srcset="./images/projects/severstal-2@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/severstal-3.png" srcset="./images/projects/severstal-3@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/severstal-3.webp 1x, ./images/projects/severstal-3@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/severstal-3.png" srcset="./images/projects/severstal-3@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/severstal-4.png" srcset="./images/projects/severstal-4@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/severstal-4.webp 1x, ./images/projects/severstal-4@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/severstal-4.png" srcset="./images/projects/severstal-4@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
                 </li>
               </ul>
               <div class="projects-card__content">
                 <span>Промышленность</span>
                 <h3>Северсталь</h3>
-                <p>Адаптация нового брендинга для digital</p>
+                <p>Адаптация нового брендинга для digital</p>
               </div>
             </a>
           </li>
@@ -429,38 +482,46 @@
               <ul class="projects-card__list">
                 <li>
                   <picture>
-                    <img src="./images/projects/sibur-1.png" scrset="./images/projects/sibur-1@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/sibur-1.webp 1x, ./images/projects/sibur-1@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/sibur-1.png" srcset="./images/projects/sibur-1@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/sibur-2.png" scrset="./images/projects/sibur-2@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/sibur-2.webp 1x, ./images/projects/sibur-2@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/sibur-2.png" srcset="./images/projects/sibur-2@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/sibur-3.png" scrset="./images/projects/sibur-3@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/sibur-3.webp 1x, ./images/projects/sibur-3@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/sibur-3.png" srcset="./images/projects/sibur-3@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/sibur-4.png" scrset="./images/projects/sibur-4@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/sibur-4.webp 1x, ./images/projects/sibur-4@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/sibur-4.png" srcset="./images/projects/sibur-4@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
-
                 </li>
               </ul>
               <div class="projects-card__content">
                 <span>Промышленность</span>
                 <h3>Сибур</h3>
-                <p>Адаптация нового брендинга для digital</p>
+                <p>Адаптация нового брендинга для digital</p>
               </div>
-
             </a>
           </li>
           <li class="projects__slide projects-card projects-card--mr-group">
@@ -468,38 +529,46 @@
               <ul class="projects-card__list">
                 <li>
                   <picture>
-                    <img src="./images/projects/mr-group-1.png" scrset="./images/projects/mr-group-1@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/mr-group-1.webp 1x, ./images/projects/mr-group-1@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/mr-group-1.png" srcset="./images/projects/mr-group-1@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/mr-group-2.png" scrset="./images/projects/mr-group-2@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/mr-group-2.webp 1x, ./images/projects/mr-group-2@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/mr-group-2.png" srcset="./images/projects/mr-group-2@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/mr-group-3.png" scrset="./images/projects/mr-group-3@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/mr-group-3.webp 1x, ./images/projects/mr-group-3@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/mr-group-3.png" srcset="./images/projects/mr-group-3@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/mr-group-4.png" scrset="./images/projects/mr-group-4@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/mr-group-4.webp 1x, ./images/projects/mr-group-4@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/mr-group-4.png" srcset="./images/projects/mr-group-4@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
-
                 </li>
               </ul>
               <div class="projects-card__content">
                 <span>Недвижимость</span>
                 <h3>MR Group</h3>
-                <p>Адаптация нового брендинга для digital</p>
+                <p>Адаптация нового брендинга для digital</p>
               </div>
-
             </a>
           </li>
           <li class="projects__slide projects-card projects-card--glavstroy">
@@ -507,39 +576,46 @@
               <ul class="projects-card__list">
                 <li>
                   <picture>
-                    <img src="./images/projects/glavstroy-1.png" scrset="./images/projects/glavstroy-1@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/glavstroy-1.webp 1x, ./images/projects/glavstroy-1@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/glavstroy-1.png" srcset="./images/projects/glavstroy-1@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/glavstroy-2.png" scrset="./images/projects/glavstroy-2@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/glavstroy-2.webp 1x, ./images/projects/glavstroy-2@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/glavstroy-2.png" srcset="./images/projects/glavstroy-2@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/glavstroy-3.png" scrset="./images/projects/glavstroy-3@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/glavstroy-3.webp 1x, ./images/projects/glavstroy-3@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/glavstroy-3.png" srcset="./images/projects/glavstroy-3@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/glavstroy-4.png" scrset="./images/projects/glavstroy-4@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/glavstroy-4.webp 1x, ./images/projects/glavstroy-4@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/glavstroy-4.png" srcset="./images/projects/glavstroy-4@2x.png 2x"
+                      width="64" height="64" alt="">
                   </picture>
-
                 </li>
               </ul>
               <div class="projects-card__content">
                 <span>Недвижимость</span>
                 <h3>Главстрой</h3>
-                <p>Адаптация нового брендинга для digital</p>
+                <p>Адаптация нового брендинга для digital</p>
               </div>
-
             </a>
           </li>
           <li class="projects__slide projects-card projects-card--pharmstandart">
@@ -547,39 +623,46 @@
               <ul class="projects-card__list">
                 <li>
                   <picture>
-                    <img src="./images/projects/pharmstandart-1.png" scrset="./images/projects/pharmstandart-1@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/pharmstandart-1.webp 1x, ./images/projects/pharmstandart-1@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/pharmstandart-1.png"
+                      srcset="./images/projects/pharmstandart-1@2x.png 2x" width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/pharmstandart-2.png" scrset="./images/projects/pharmstandart-2@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/pharmstandart-2.webp 1x, ./images/projects/pharmstandart-2@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/pharmstandart-2.png"
+                      srcset="./images/projects/pharmstandart-2@2x.png 2x" width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/pharmstandart-3.png" scrset="./images/projects/pharmstandart-3@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/pharmstandart-3.webp 1x, ./images/projects/pharmstandart-3@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/pharmstandart-3.png"
+                      srcset="./images/projects/pharmstandart-3@2x.png 2x" width="64" height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/pharmstandart-4.png" scrset="./images/projects/pharmstandart-4@2x.png"
+                    <source type="image/webp"
+                      srcset="./images/projects/pharmstandart-4.webp 1x, ./images/projects/pharmstandart-4@2x.webp 2x"
                       width="64" height="64">
+                    <img src="./images/projects/pharmstandart-4.png"
+                      srcset="./images/projects/pharmstandart-4@2x.png 2x" width="64" height="64" alt="">
                   </picture>
-
                 </li>
               </ul>
               <div class="projects-card__content">
                 <span>Медицина</span>
                 <h3>Фармстандарт</h3>
-                <p>Адаптация нового брендинга для digital</p>
+                <p>Адаптация нового брендинга для digital</p>
               </div>
-
             </a>
           </li>
           <li class="projects__slide projects-card projects-card--tek">
@@ -587,41 +670,50 @@
               <ul class="projects-card__list">
                 <li>
                   <picture>
-                    <img src="./images/projects/tek-1.png" scrset="./images/projects/tek-1@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/tek-1.webp 1x, ./images/projects/tek-1@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/tek-1.png" srcset="./images/projects/tek-1@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/tek-2.png" scrset="./images/projects/tek-2@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/tek-2.webp 1x, ./images/projects/tek-2@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/tek-2.png" srcset="./images/projects/tek-2@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/tek-3.png" scrset="./images/projects/tek-3@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/tek-3.webp 1x, ./images/projects/tek-3@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/tek-3.png" srcset="./images/projects/tek-3@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
-
                 </li>
                 <li>
                   <picture>
-                    <img src="./images/projects/tek-4.png" scrset="./images/projects/tek-4@2x.png" width="64"
+                    <source type="image/webp"
+                      srcset="./images/projects/tek-4.webp 1x, ./images/projects/tek-4@2x.webp 2x" width="64"
                       height="64">
+                    <img src="./images/projects/tek-4.png" srcset="./images/projects/tek-4@2x.png 2x" width="64"
+                      height="64" alt="">
                   </picture>
-
                 </li>
               </ul>
               <div class="projects-card__content">
                 <span>Промышленность</span>
                 <h3>Тэк-Торг</h3>
-                <p>Адаптация нового брендинга для digital</p>
+                <p>Адаптация нового брендинга для digital</p>
               </div>
             </a>
           </li>
         </ul>
+
       </div>
     </section>
     <section class="banners">
@@ -633,7 +725,7 @@
               <div class="banners__desk">
                 <div class="banners__desk-string">
                   <p>Формируем</p>
-                  <img class="banners__icon--line" src="./images/icon-line.svg" width="44" height="35" alt="">
+                  <img class="banners__icon--line" src="../icons/stack.svg#icon-line" width="44" height="35" alt="">
                 </div>
                 <div class="banners__desk-string">
                   <div class="banners__icon--heart">
@@ -651,7 +743,7 @@
                 </div>
                 <div class="banners__desk-string">
                   <div class="banners__icon--planet">
-                    <img src="./images/icon-planet.svg" width="30" height="30" alt="">
+                    <img src="../icons/stack.svg#icon-planet" width="30" height="30" alt="">
                   </div>
                   <span>в digital - среде</span>
                 </div>
@@ -684,6 +776,9 @@
                   <img src="./images/banners/realty-4.png" srcset="./images/banners/realty-4@2x.png" width="374"
                     height="296" alt="">
                 </picture>
+              </div>
+              <div class="banners__img banners__img--5">
+                <img src="./images/svg/realty-5.svg" width="62" height="50" alt="Иконка компьютера.">
               </div>
             </div>
           </li>
@@ -746,13 +841,13 @@
               </div>
             </div>
           </li>
-          <li class="banners__slide banners__slide--realty" data-id="3">
+          <li class="banners__slide banners__slide--realty is-active" data-id="3">
             <div class="banners__slide-text">
               <h2 class="banners__title title">недвижимость</h2>
               <div class="banners__desk">
                 <div class="banners__desk-string">
                   <p>Формируем</p>
-                  <img class="banners__icon--line" src="./images/icon-line.svg" width="44" height="35" alt="">
+                  <img class="banners__icon--line" src="../icons/stack.svg#icon-line" width="44" height="35" alt="">
                 </div>
                 <div class="banners__desk-string">
                   <div class="banners__icon--heart">
@@ -770,7 +865,7 @@
                 </div>
                 <div class="banners__desk-string">
                   <div class="banners__icon--planet">
-                    <img src="./images/icon-planet.svg" width="30" height="30" alt="">
+                    <img src="../icons/stack.svg#icon-planet" width="30" height="30" alt="">
                   </div>
                   <span>в digital - среде</span>
                 </div>
@@ -803,6 +898,9 @@
                   <img src="./images/banners/realty-4.png" srcset="./images/banners/realty-4@2x.png" width="374"
                     height="296" alt="">
                 </picture>
+              </div>
+              <div class="banners__img banners__img--5">
+                <img src="./images/svg/realty-5.svg" width="62" height="50" alt="Иконка компьютера.">
               </div>
             </div>
           </li>
@@ -967,7 +1065,7 @@
         <li>
           <span>13</span>
           <h3>Рейтинг Рунета 2024</h3>
-          <p>в рейтинге веб-дизайна</p>
+          <p>в рейтинге<br>веб-дизайна</p>
         </li>
         <li>
           <span>8</span>

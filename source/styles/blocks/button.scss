@@ -8,7 +8,7 @@
   align-items: center;
   border-radius: size(15px);
   border: none;
-  padding: size(20px) size(64px);
+  padding: size(22px) size(65px);
   background-color: v.$default-black;
   font-family: $ff-default;
   font-weight: 600;
@@ -36,7 +36,7 @@
       border-radius: size(30px);
       background-color: $default-white;
       color: $default-black;
-      box-shadow: 0 7px 18px -15px rgba(14, 14, 14, 0.04), 0 20px 20px 0 rgba(14, 14, 14, 0.05), 0 24px 19px -30px rgba(14, 14, 14, 0.25);
+      box-shadow: 0px 7px 18px -15px rgba(14, 14, 14, 0.04),0px 20px 20px 0px rgba(14, 14, 14, 0.05),0px 24px 19px -30px rgba(14, 14, 14, 0.25);
     }
   }
 }

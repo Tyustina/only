@@ -5,6 +5,8 @@
     flex-shrink: 0;
     border-radius: size(30px);
     margin-right: size(20px);
+    transition: transform 0.5s ease-in, border-radius 0.5s ease-in;
+    cursor: pointer;
 
     @include vp-1279 {
         margin-right: 15px;
@@ -95,14 +97,23 @@
         }
 
         p {
+            width: 80%;
             font-family: $ff-second;
             font-weight: 400;
             font-size: size(16px);
             line-height: 140%;
             letter-spacing: -0.02em;
             margin: 0;
+            padding: 0;
             opacity: 0.6;
 
+        }
+    }
+
+    &:hover {
+        @include only-desktop {
+            transform: scale(1.05);
+            border-radius: size(40px);
         }
     }
 }

@@ -4,10 +4,10 @@
 .awards {
     @include m.container;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     border-top: 1px solid $light-grey;
     padding-bottom: size(130px);
-    row-gap: size(80px);
+    row-gap: size(76px);
 
     @include vp-767 {
         display: flex;
@@ -35,6 +35,7 @@
         }
 
         p {
+            width: 85%;
             font-family: $ff-second;
             font-weight: 400;
             font-size: size(16px);
@@ -45,6 +46,7 @@
         }
 
         p:first-child {
+            width: 70%;
             font-family: $ff-default;
             font-weight: 600;
             font-size: size(26px);
@@ -113,30 +115,16 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                transition: all 0.3s ease-in;
+                transition: all 0.5s ease-in;
                 width: 0px;
-                height: size(50px);
+                width: 0;
+                height: 0;
+                background-color: $green;
+                border-radius: size(15px);
                 opacity: 0;
 
                 @include vp-1279 {
                     display: none;
-                }
-
-                img {
-                    z-index: 2;
-                }
-
-                &::before {
-                    position: absolute;
-                    content: "";
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    border-radius: size(15px);
-                    width: 0px;
-                    height: size(70px);
-                    background-color: $green;
-                    opacity: 0;
                 }
             }
 
@@ -162,23 +150,20 @@
 
                 span {
                     width: size(70px);
+                    height: size(70px);
                     margin-right: size(20px);
                     opacity: 1;
-
-                    &::before {
-                        width: size(70px);
-                        opacity: 1;
-                    }
                 }
             }
         }
     }
 
     &__list {
-        @include m.container;
+        @include list-reset;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: size(20px);
+        margin-left: 10px;
 
         @include vp-1279 {
             gap: 15px;

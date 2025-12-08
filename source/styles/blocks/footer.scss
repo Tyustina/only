@@ -5,8 +5,8 @@
     @include container;
     display: grid;
     grid-template-columns: 53% 47%;
-    // row-gap: size(80px);
     padding-top: size(38px);
+    border-top: 1px solid $light-grey;
 
     @include vp-1279 {
         padding-top: 26px;
@@ -73,7 +73,6 @@
         row-gap: size(16px);
         column-gap: 10px;
         align-items: center;
-        padding-top: size(4px);
 
         @include vp-1279 {
             grid-area: 1/1/2/-1;
