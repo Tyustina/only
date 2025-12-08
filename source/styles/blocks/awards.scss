@@ -9,6 +9,13 @@
     padding-bottom: size(130px);
     row-gap: size(80px);
 
+    @include vp-767 {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        overflow: hidden;
+    }
+
     &__title {
         padding-top: size(40px);
     }
@@ -20,6 +27,12 @@
         padding-left: size(40px);
         padding-top: size(40px);
         border-left: 1px solid $light-grey;
+
+        @include vp-767 {
+            padding: 0;
+            border: none;
+            gap: 15px;
+        }
 
         p {
             font-family: $ff-second;
@@ -52,11 +65,19 @@
             gap: 15px;
         }
 
+        @include vp-767 {
+            gap: 10px;
+        }
+
         a {
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
             align-items: center;
+
+            @include vp-767 {
+                gap: 10px;
+            }
 
             p {
                 font-weight: 600;
@@ -69,12 +90,21 @@
                 transition: opacity 0.3s ease-in;
 
                 @include vp-1023 {
+                    margin: 0;
                     font-size: 32px;
                     opacity: 1;
                 }
 
+                @include vp-767 {
+                    font-size: 28px;
+                }
+
                 &:last-child {
                     margin-right: size(25px);
+
+                    @include vp-1023 {
+                        margin: 0;
+                    }
                 }
             }
 
@@ -89,7 +119,7 @@
                 opacity: 0;
 
                 @include vp-1023 {
-                   display: none;
+                    display: none;
                 }
 
                 img {
@@ -119,6 +149,10 @@
                 text-transform: lowercase;
                 margin-bottom: auto;
                 opacity: 0.6;
+
+                @include vp-767 {
+                    font-size: 12px;
+                }
             }
 
             &:hover {
@@ -150,6 +184,22 @@
             gap: 15px;
         }
 
+        @include vp-767 {
+            display: flex;
+            gap: 10px;
+            user-select: none;
+            /* чтобы текст не выделялся при свайпе */
+            cursor: grab;
+            /* красивая рука */
+            transition: transform 0.35s ease-out;
+
+            &.dragging {
+                transition: none;
+                /* убираем анимацию, пока тянем */
+                cursor: grabbing;
+            }
+        }
+
         li {
             display: flex;
             flex-direction: column;
@@ -166,6 +216,14 @@
                 width: 170px;
                 height: 170px;
                 gap: 4px;
+            }
+
+            @include vp-767 {
+                flex-shrink: 0;
+                border-radius: 15px;
+                padding: 20px;
+                width: 190px;
+                height: 190px;
             }
 
             span {

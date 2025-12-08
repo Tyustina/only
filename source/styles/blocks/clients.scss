@@ -54,9 +54,7 @@
             transition: transform 0.3s ease-in;
             z-index: -1;
 
-            @include vp-1023 {
-
-            }
+            @include vp-1023 {}
         }
 
         @include vp-1023 {
@@ -69,7 +67,9 @@
         }
 
         &:hover::before {
-            transform: scale(1);
+            @include only-desktop {
+                transform: scale(1);
+            }
         }
     }
 

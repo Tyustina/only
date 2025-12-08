@@ -36,6 +36,12 @@
   }
 }
 
+@mixin only-desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
 @mixin vp-1439 {
   @media (max-width: (v.$vp-1440 - 1px)) {
     @content;

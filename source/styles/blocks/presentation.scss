@@ -18,10 +18,17 @@
         color: v.$default-black;
         background-color: v.$default-white;
         text-decoration: none;
+        transition: background 0.3s ease-in;
 
         @include vp-1023 {
             border-radius: 12px;
             padding: 14px;
+        }
+
+        &:hover {
+            @include only-desktop {
+                background-color: $green;
+            }
         }
     }
 
