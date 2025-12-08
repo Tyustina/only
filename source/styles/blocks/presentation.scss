@@ -20,7 +20,7 @@
         text-decoration: none;
         transition: background 0.3s ease-in;
 
-        @include vp-1023 {
+        @include vp-1279 {
             border-radius: 12px;
             padding: 14px;
         }
@@ -41,7 +41,7 @@
         margin-left: 10px;
         opacity: 0.6;
 
-        @include vp-1023 {
+        @include vp-1279 {
             font-size: 13px;
             margin-left: 0;
         }

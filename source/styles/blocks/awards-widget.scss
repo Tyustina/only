@@ -40,6 +40,12 @@
         width: size(var(--w));
         height: size(var(--h));
       }
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 0.8;
+      }
     }
   }
 }

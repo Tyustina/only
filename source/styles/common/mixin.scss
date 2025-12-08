@@ -12,7 +12,7 @@
   padding-right: 30px;
   margin: 0 auto;
 
-  @media (max-width: (v.$vp-1024 - 1px)) {
+  @media (max-width: (v.$vp-1280 - 1px)) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -31,13 +31,13 @@
   letter-spacing: -0.02em;
   margin: 0;
 
-  @include vp-1023 {
+  @include vp-1279 {
     font-size: 15px;
   }
 }
 
 @mixin only-desktop {
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     @content;
   }
 }
@@ -69,5 +69,17 @@
 @mixin vp-374 {
   @media (max-width: (v.$vp-375 - 1px)) {
     @content;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

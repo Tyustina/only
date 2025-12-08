@@ -7,7 +7,7 @@
   padding-bottom: size(10px);
   border-bottom: 1px solid v.$light-grey;
 
-  @include vp-1023 {
+  @include vp-1279 {
     padding-top: 16px;
     padding-bottom: 17px;
   }
@@ -29,7 +29,7 @@
       width: size(73px);
       height: size(24px);
 
-      @include vp-1023 {
+      @include vp-1279 {
         width: 55px;
         height: 18px;
       }
@@ -44,7 +44,7 @@
   &__toggle {
     display: none;
 
-    @include m.vp-1023 {
+    @include m.vp-1279 {
       position: relative;
       display: flex;
       flex-direction: column;

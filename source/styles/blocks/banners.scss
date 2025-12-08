@@ -8,7 +8,7 @@
     padding-top: size(75px);
     overflow: hidden;
 
-    @include vp-1023 {
+    @include vp-1279 {
         padding-top: 54px;
     }
 
@@ -26,7 +26,7 @@
         width: 100%;
         min-height: size(650px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             min-height: 450px;
         }
     }
@@ -48,7 +48,7 @@
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
 
-        @include vp-1023 {
+        @include vp-1279 {
             grid-template-columns: 65% 35%;
             padding: 60px 25px 85px;
         }
@@ -62,7 +62,7 @@
         display: grid;
         gap: size(30px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             gap: 24px;
         }
     }
@@ -72,7 +72,7 @@
         font-family: $ff-default;
     }
 
-    p:not(.banners__title p) {
+    p:not(.banners__desk p) {
         width: 85%;
         font-family: $ff-second;
         font-weight: 400;
@@ -80,26 +80,30 @@
         line-height: 140%;
         letter-spacing: -0.02em;
         margin: 0;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-in, transform 0.9s ease;
 
-        @include vp-1023 {
+
+        @include vp-1279 {
             width: 90%;
             font-size: 15px;
             margin-top: 4px;
         }
     }
 
-    &__title {
+    &__desk {
         display: flex;
         flex-direction: column;
         gap: size(2px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             gap: 0;
         }
     }
 
 
-    &__title-string {
+    &__desk-string {
         display: flex;
         align-items: center;
 
@@ -113,7 +117,7 @@
             margin: 0;
             margin-right: size(12px);
 
-            @include vp-1023 {
+            @include vp-1279 {
                 font-size: 28px;
                 line-height: 115%;
                 margin-right: 8px;
@@ -131,7 +135,7 @@
             background-color: $green;
             margin: 0;
 
-            @include vp-1023 {
+            @include vp-1279 {
                 padding: 2px 18px 5px;
             }
         }
@@ -141,7 +145,7 @@
         width: size(44px);
         height: size(35px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             width: 36px;
             height: 29px;
         }
@@ -152,7 +156,7 @@
         width: size(44px);
         height: size(44px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             img {
                 width: 32px;
                 height: 32px;
@@ -173,7 +177,7 @@
             height: size(30px);
         }
 
-        @include vp-1023 {
+        @include vp-1279 {
             padding: 8px 14px;
 
             img {
@@ -190,6 +194,10 @@
 
     &__button {
         margin-top: -6px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-in, transform 0.9s ease;
+
     }
 
     &__toggles {
@@ -201,7 +209,7 @@
         flex-wrap: wrap;
         gap: size(2px) size(10px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             gap: 2px 5px;
             bottom: 26px;
             left: calc(50% - 20px);
@@ -219,7 +227,7 @@
         transition: opacity 0.3s ease-in-out;
         opacity: 0.3;
 
-        @include vp-1023 {
+        @include vp-1279 {
             width: 6px;
             height: 6px;
 
@@ -232,11 +240,29 @@
 
     &__img {
         position: absolute;
+    }
 
+    &__img img {
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 0.8s ease-in, transform 0.9s ease;
+    }
+
+    &__slide.is-active {
         img {
-            object-fit: cover;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        button,
+        p:not(.banners__desk p) {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
+
+
+
 
     &__slide-pictures--realty>&__img--1 {
         width: size(353px);
@@ -244,7 +270,7 @@
         top: size(210px);
         left: size(-90px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             width: 187px;
             height: 102px;
             top: 167px;
@@ -258,7 +284,7 @@
         top: size(-29px);
         left: size(187px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             width: 99px;
             height: 215px;
             top: 5px;
@@ -272,7 +298,7 @@
         top: size(199px);
         left: size(308px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             width: 144px;
             height: 144px;
             top: 169px;
@@ -286,7 +312,7 @@
         top: size(-22px);
         right: size(-11px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             width: 207px;
             height: 207px;
             top: 49px;

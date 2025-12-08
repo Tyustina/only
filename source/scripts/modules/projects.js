@@ -2,14 +2,15 @@ const slider = document.querySelector('.projects__slider');
 const prevBtn = document.querySelector('.projects__button--prev');
 const nextBtn = document.querySelector('.projects__button--next');
 const slides = document.querySelectorAll('.projects__slider li');
-
-let slideWidthWithMargin = 0;
 let currentStartIndex = 0;
+
 
 const totalSlides = slides.length;
 export function switchSlide() {
-    scrollSlider();
-    updateButtons();
+    if (window.innerWidth > 767) {
+        scrollSlider();
+        updateButtons();
+    }
 }
 
 function getSlideSize() {
@@ -25,11 +26,11 @@ function getSlideSize() {
 
 }
 function updateButtons() {
-    const {width, margin} = getSlideSize();
+    const { width, margin } = getSlideSize();
     const slideFullWidth = width + margin;
-    const visibleSlidesCount = Math.floor(slider.offsetWidth/slideFullWidth);
+    const visibleSlidesCount = Math.floor(slider.offsetWidth / slideFullWidth);
 
-    if(totalSlides <= visibleSlidesCount) {
+    if (totalSlides <= visibleSlidesCount) {
         prevBtn.disabled = true;
         nextBtn.disabled = true;
         return;
@@ -40,27 +41,27 @@ function updateButtons() {
 }
 
 function scrollSlider() {
-    const {width, margin} = getSlideSize();
+    const { width, margin } = getSlideSize();
     const slideFullWidth = width + margin;
     slider.scrollTo({
-        left: currentStartIndex*slideFullWidth,
+        left: currentStartIndex * slideFullWidth,
         behavior: 'smooth'
     })
     updateButtons();
 }
 prevBtn.addEventListener('click', () => {
-    if(currentStartIndex>0) {
+    if (currentStartIndex > 0) {
         currentStartIndex--;
         scrollSlider();
     }
 });
 
 nextBtn.addEventListener('click', () => {
-    const {width, margin} = getSlideSize();
+    const { width, margin } = getSlideSize();
     const slideFullWidth = width + margin;
-    const visibleSlidesCount = Math.floor(slider.offsetWidth/slideFullWidth);
+    const visibleSlidesCount = Math.floor(slider.offsetWidth / slideFullWidth);
 
-    if((currentStartIndex+visibleSlidesCount <totalSlides)) {
+    if ((currentStartIndex + visibleSlidesCount < totalSlides)) {
         currentStartIndex++;
         scrollSlider();
     }

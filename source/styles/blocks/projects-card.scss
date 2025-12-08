@@ -6,7 +6,7 @@
     border-radius: size(30px);
     margin-right: size(20px);
 
-    @include vp-1023 {
+    @include vp-1279 {
         margin-right: 15px;
     }
 
@@ -50,7 +50,7 @@
         flex-direction: column;
         padding: size(30px) size(29px) size(30px) size(30px);
 
-        @include vp-1023 {
+        @include vp-1279 {
             width: 357px;
             height: 280px;
         }

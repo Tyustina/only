@@ -13,8 +13,9 @@ html {
   font-family: v.$ff-default;
   font-size: size-desktop($fz-default);
   color: v.$default-black;
-
-  @include m.vp-1023 {
+  scroll-behavior: smooth;
+  
+  @include m.vp-1279 {
     font-size: $fz-default;
   }
 }

@@ -77,8 +77,10 @@ var slides = document.querySelectorAll(".projects__slider li");
 var currentStartIndex = 0;
 var totalSlides = slides.length;
 function switchSlide() {
-  scrollSlider();
-  updateButtons();
+  if (window.innerWidth > 767) {
+    scrollSlider();
+    updateButtons();
+  }
 }
 function getSlideSize() {
   if (slides.length === 0) {
@@ -127,84 +129,35 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// source/scripts/modules/portfolio.js
-var sliders = document.querySelectorAll(".portfolio__items");
-var isDown = false;
-var startX;
-var scrollLeft;
-var isMobile = window.innerWidth < 768;
-function initPortfolioSlider() {
-  if (isMobile) {
-    sliders.forEach((slides2) => {
-      slides2.addEventListener("mousedown", (e) => {
-        isDown = true;
-        startX = e.pageX;
-        scrollLeft = slides2.scrollLeft;
-      });
-      slides2.addEventListener("mouseleave", () => isDown = false);
-      slides2.addEventListener("mouseup", () => isDown = false);
-      slides2.addEventListener("mousemove", (e) => {
-        if (!isDown)
-          return;
-        e.preventDefault();
-        const x = e.pageX;
-        const walk = (x - startX) * 2;
-        slides2.style.transform = `translateX(${scrollLeft - walk}px)`;
-      });
-      slides2.addEventListener("mouseup", () => {
-        if (!isDown)
-          return;
-        isDown = false;
-        const walked = scrollLeft - (scrollLeft - slides2.style.transform.replace("translateX(", "").replace("px)", "") * 1);
-        const slideWidth = 320;
-        const page = Math.round(walked / slideWidth);
-        slides2.style.transform = `translateX(-${page * cardWidth}px)`;
-      });
-    });
-  }
-}
-
-// source/scripts/modules/awards.js
-function initAwardsSlider() {
-  const list = document.querySelector(".awards__list");
-  if (!list) {
+// source/scripts/modules/animations.js
+var observer = null;
+function initScrollAnimation() {
+  const animatedElements = document.querySelectorAll("[data-animate]");
+  if (!animatedElements.length) {
     return;
   }
-  ;
-  let isDown2 = false;
-  let startX2 = 0;
-  let scrollLeft2 = 0;
-  const cardWidth2 = list.querySelector("li").offsetWidth + 10;
-  const start = (e) => {
-    isDown2 = true;
-    list.classList.add("dragging");
-    startX2 = e.pageX || e.touches[0].pageX;
-    scrollLeft2 = list.scrollLeft || 0;
+  if (observer) {
+    animatedElements.forEach((element) => {
+      observer.unobserve(element);
+    });
+  }
+  const isTabletOrMobile = window.innerWidth <= 1279;
+  const observerOptions = {
+    threshold: isTabletOrMobile ? 0.28 : 0.4
   };
-  const move = (e) => {
-    if (!isDown2)
-      return;
-    e.preventDefault();
-    const x = e.pageX || e.touches[0].pageX;
-    const walk = (x - startX2) * 2;
-    list.style.transform = `translateX(${scrollLeft2 - walk}px)`;
-  };
-  const end = () => {
-    if (!isDown2)
-      return;
-    isDown2 = false;
-    list.classList.remove("dragging");
-    const moved = Math.abs(parseFloat(list.style.transform) || 0);
-    const page = Math.round(moved / cardWidth2);
-    list.style.transform = `translateX(-${page * cardWidth2}px)`;
-  };
-  list.addEventListener("mousedown", start);
-  list.addEventListener("mousemove", move);
-  list.addEventListener("mouseup", end);
-  list.addEventListener("mouseleave", end);
-  list.addEventListener("touchstart", start);
-  list.addEventListener("touchmove", move);
-  list.addEventListener("touchend", end);
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("animate");
+        }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  animatedElements.forEach((element) => {
+    observer.observe(element);
+  });
 }
 
 // source/scripts/main.js
@@ -212,7 +165,11 @@ window.addEventListener("DOMContentLoaded", () => {
   switchingNav();
   flippingBanners();
   switchSlide();
-  initPortfolioSlider();
-  initAwardsSlider();
+  initScrollAnimation();
+});
+window.addEventListener("resize", () => {
+  initScrollAnimation();
+  switchingNav();
+  switchSlide();
 });
 //# sourceMappingURL=main.js.map

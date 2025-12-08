@@ -24,7 +24,7 @@
         letter-spacing: -0.03em;
         margin: 0;
 
-        @include vp-1023 {
+        @include vp-1279 {
             font-size: 20px;
         }
     }
@@ -39,6 +39,21 @@
         display: flex;
         overflow: hidden;
         scroll-behavior: smooth;
+
+        @include vp-767 {
+            user-select: none;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            cursor: grab;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 
     &__buttons {
@@ -46,6 +61,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: size(15px);
+
+        @include vp-767 {
+            display: none;
+        }
     }
 
     &__button {
@@ -62,7 +81,7 @@
         color: $default-black;
         cursor: pointer;
 
-        @include vp-1023 {
+        @include vp-1279 {
             border-radius: 12px;
             width: 48px;
             height: 48px;

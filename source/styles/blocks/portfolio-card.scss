@@ -5,49 +5,49 @@
   display: flex;
   flex-direction: column;
   gap: size(24px);
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 
-  @include vp-1023 {
-    gap: 20px;
+  @include vp-1279 {
+    gap: size(20px);
   }
 
   @include vp-767 {
-    max-width: 100%;
+    width: 315px;
+
     flex-shrink: 0;
+    scroll-snap-align: center;
     cursor: grab;
   }
 
-
   &__img {
+    width: 100%;
+    height: 100%;
     display: flex;
-    position: relative;
     border-radius: size(30px);
-    width: size(447px);
-    height: size(450px);
     transition: transform 0.5s ease-in, border-radius 0.5s ease-in;
     overflow: hidden;
 
-    @include vp-1023 {
-      border-radius: 20px;
-      width: 357px;
-      height: 349px;
-    }
-
     img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      object-position: center;
+      width: size(447px);
+      height: size(450px);
       transition: transform 0.5s ease-in, object-position 0.5s ease-in;
+
+      @include vp-1279 {
+        width: 100%;
+        height: auto;
+      }
     }
 
-    @include vp-767 {
-      width: 315px;
-      height: 315px;
+    @include vp-1279 {
+      border-radius: size(20px);
     }
+
+    // @include vp-767 {
+    //   width: 315px;
+    //   height: 315px;
+    // }
   }
 
   &__content {
@@ -56,9 +56,9 @@
     gap: size(10px);
     padding: 0 size(20px);
 
-    @include vp-1023 {
-      padding: 0 15px;
-      gap: 8px;
+    @include vp-1279 {
+      padding: 0 size(15px);
+      gap: size(8px);
     }
 
     h4 {
@@ -68,8 +68,8 @@
       letter-spacing: -0.03em;
       margin: 0;
 
-      @include vp-1023 {
-        font-size: 15px;
+      @include vp-1279 {
+        font-size: size(15px);
       }
     }
 
@@ -81,8 +81,8 @@
       letter-spacing: -0.02em;
       margin: 0;
 
-      @include vp-1023 {
-        font-size: 15px;
+      @include vp-1279 {
+        font-size: size(15px);
       }
     }
   }
