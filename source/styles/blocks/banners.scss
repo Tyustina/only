@@ -10,7 +10,8 @@
     overflow: hidden;
 
     @include vp-1279 {
-        padding-top: 54px;
+        padding-top: 40px;
+        padding-bottom: 80px;
     }
 
     @include vp-767 {
@@ -53,36 +54,9 @@
             grid-template-columns: 65% 35%;
             padding: 60px 25px 85px;
         }
-    }
 
-    &__slide.is-active {
-        opacity: 1;
-        z-index: 4;
-
-        img {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .banners__button,
-        p:not(.banners__desk p) {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .banners__icon--planet {
-            padding: size(10px) size(18px);
-            transform: scale(1);
-        }
-
-        .banners__icon--phone {
-            padding: size(7px) size(14px);
-            transform: scale(1);
-
-        }
-
-        .banners__desk-string {
-            opacity: 1;
+        &--app {
+            background-color: #EDEBE9;
         }
     }
 
@@ -91,7 +65,7 @@
         gap: size(30px);
 
         @include vp-1279 {
-            gap: 24px;
+            gap: 14px;
         }
     }
 
@@ -99,6 +73,10 @@
         font-weight: 600;
         font-family: $ff-default;
         font-size: size(14px);
+
+        @include vp-1279 {
+            font-size: 13px;
+        }
     }
 
     p:not(.banners__desk p) {
@@ -117,7 +95,7 @@
         @include vp-1279 {
             width: 90%;
             font-size: 15px;
-            margin-top: 4px;
+            margin-top: 8px;
         }
     }
 
@@ -127,6 +105,7 @@
         gap: size(2px);
 
         @include vp-1279 {
+            margin-top: 8px;
             gap: 0;
         }
     }
@@ -150,7 +129,7 @@
 
             @include vp-1279 {
                 font-size: 28px;
-                line-height: 115%;
+                line-height: 100%;
                 margin-right: 8px;
             }
 
@@ -161,6 +140,10 @@
 
         p {
             margin-top: 4px;
+
+            @include vp-1279 {
+                margin: 0;
+            }
         }
 
         span {
@@ -174,24 +157,33 @@
                 padding: 2px 18px 5px;
             }
         }
+
+        &:last-child {
+            @include vp-1279 {
+                margin-top: -4px;
+            }
+        }
     }
 
-    &__icon--line {
+    &__icon-line {
         width: size(44px);
         height: size(35px);
 
         @include vp-1279 {
             width: 36px;
             height: 29px;
+            margin-left: 9px;
         }
     }
 
-    &__icon--heart,
-    &__icon--town {
+    &__icon-heart,
+    &__icon-town {
         width: size(44px);
         height: size(44px);
 
         @include vp-1279 {
+            margin-right: -6px;
+
             img {
                 width: 32px;
                 height: 32px;
@@ -199,7 +191,7 @@
         }
     }
 
-    &__icon--planet {
+    &__icon-planet {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -212,19 +204,15 @@
         img {
             width: size(30px);
             height: size(30px);
-        }
 
-        @include vp-1279 {
-            padding: 8px 14px;
-
-            img {
+            @include vp-1279 {
                 width: 22px;
                 height: 22px;
             }
         }
     }
 
-    &__icon--phone {
+    &__icon-phone {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -254,7 +242,9 @@
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 0.8s ease-in, transform 0.9s ease;
-
+        @include vp-1279 {
+            margin-top: 4px;
+        }
     }
 
     &__toggles {
@@ -416,5 +406,40 @@
         height: size(90px);
         top: size(141px);
         left: size(-2px);
+    }
+
+    &__slide.is-active {
+        opacity: 1;
+        z-index: 4;
+
+        img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .banners__button,
+        p:not(.banners__desk p) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .banners__icon-planet {
+            padding: size(10px) size(18px);
+            transform: scale(1);
+
+            @include vp-1279 {
+                padding: 8px 14px;
+            }
+        }
+
+        .banners__icon-phone {
+            padding: size(7px) size(14px);
+            transform: scale(1);
+
+        }
+
+        .banners__desk-string {
+            opacity: 1;
+        }
     }
 }

@@ -5,12 +5,15 @@
   display: flex;
   flex-direction: column;
   gap: size(24px);
-  width: 100%;
-  height: 100%;
   cursor: pointer;
+
+  @include vp-1279 {
+    gap: 22px;
+  }
 
   @include vp-767 {
     width: 315px;
+    gap: 14px;
     flex-shrink: 0;
     scroll-snap-align: center;
     cursor: grab;
@@ -18,19 +21,28 @@
 
   &__img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     border-radius: size(30px);
     transition: transform 0.5s ease-in, border-radius 0.5s ease-in;
     overflow: hidden;
+
+    @include vp-1279 {
+      border-radius: 16px;
+    }
 
     img {
       width: size(447px);
       height: size(450px);
 
       @include vp-1279 {
-        width: 100vw;
-        height: auto;
+        width: size(357px);
+        height: size(349px);
+      }
+
+      @include vp-767 {
+        width: 315px;
+        height: 315px;
       }
     }
   }
@@ -44,6 +56,11 @@
     @include vp-1279 {
       padding: 0 size(15px);
       gap: size(8px);
+    }
+
+    @include vp-767 {
+      gap: 6px;
+      padding: 0 10px;
     }
 
     h4 {

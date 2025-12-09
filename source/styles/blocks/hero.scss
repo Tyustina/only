@@ -11,9 +11,8 @@
   margin-bottom: size(65px);
 
   @include vp-1279 {
-    padding-top: 50px;
-    padding-bottom: 18px;
     margin-bottom: 0;
+    padding: 0;
     row-gap: 560px;
   }
 
@@ -44,15 +43,22 @@
       width: 1px;
       height: 130px;
       background: v.$light-grey;
+
+      @include vp-767 {
+        display: none;
+      }
     }
 
     @include vp-1279 {
+      @include m.container;
       font-size: 38px;
+      padding-top: 50px;
       letter-spacing: -0.01em;
     }
 
     @include vp-767 {
       font-size: 32px;
+      padding-top: 0;
       letter-spacing: -0.01em;
     }
   }
@@ -66,6 +72,7 @@
     background-color: $default-black;
     border-radius: size(20px);
     overflow: hidden;
+    z-index: 5;
 
     @include vp-1279 {
       border-radius: 12px;
@@ -81,6 +88,10 @@
       top: calc(50% - 112px);
       width: 225px;
       height: 135px;
+    }
+
+    video {
+      height: 100%;
     }
   }
 
@@ -109,15 +120,22 @@
       width: 1px;
       height: 100%;
       background: v.$light-grey;
+
+      @include vp-767 {
+        display: none
+      }
     }
 
     @include vp-1279 {
+      @include m.container;
+      padding-bottom: 18px;
       grid-template-columns: 1fr 1fr;
     }
 
     @include vp-767 {
       grid-template-columns: 1fr 1fr;
-      row-gap: 51px;
+      row-gap: 52px;
+      padding-bottom: 1px;
     }
   }
 
@@ -229,7 +247,7 @@
         margin-bottom: auto;
 
         @include vp-767 {
-          margin-top: 10px;
+          margin-top: 12px;
         }
       }
     }
@@ -296,7 +314,7 @@
       width: 100%;
       margin: 0;
       padding-top: 15px;
-      padding-bottom: 14px;
+      padding-bottom: 15px;
     }
   }
 }

@@ -6,6 +6,16 @@
     padding-top: size(125px);
     padding-bottom: size(132px);
 
+    @include vp-1279 {
+        padding-top: 75px;
+        padding-bottom: 83px;
+    }
+
+    @include vp-767 {
+        padding-top: 30px;
+        padding-bottom: 71px;
+    }
+
     p {
         font-weight: 600;
         font-size: size(26px);
@@ -14,6 +24,11 @@
         letter-spacing: -0.03em;
         margin-bottom: size(78px);
         text-align: center;
+
+        @include vp-1279 {
+            font-size: 20px;
+            margin-bottom: 55px;
+        }
 
         @include vp-767 {
             display: none
@@ -74,7 +89,7 @@
         }
     }
 
-    &__item--severstal {
+    &__item--severstal img {
         width: size(162px);
         height: size(52px);
 
@@ -89,7 +104,7 @@
         }
     }
 
-    &__item--sibur {
+    &__item--sibur img {
         width: size(123px);
         height: size(24px);
 
@@ -104,7 +119,7 @@
         }
     }
 
-    &__item--tek {
+    &__item--tek img {
         width: size(156px);
         height: size(36px);
 
@@ -119,7 +134,7 @@
         }
     }
 
-    &__item--rosatom {
+    &__item--rosatom img {
         width: size(125px);
         height: size(56px);
 
@@ -134,7 +149,7 @@
         }
     }
 
-    &__item--nlmk {
+    &__item--nlmk img {
         width: size(107px);
         height: size(60px);
 
@@ -150,7 +165,7 @@
         }
     }
 
-    &__item--rosteh {
+    &__item--rosteh img {
         width: size(123px);
         height: size(24px);
 
@@ -165,7 +180,7 @@
         }
     }
 
-    &__item--uralhim {
+    &__item--uralhim img {
         width: size(155px);
         height: size(20px);
 
@@ -179,7 +194,7 @@
         }
     }
 
-    &__item--schlumberger {
+    &__item--schlumberger img {
         width: size(129px);
         height: size(29px);
 
@@ -194,7 +209,7 @@
         }
     }
 
-    &__item--mrgroup {
+    &__item--mrgroup img {
         width: size(127px);
         height: size(28px);
 
@@ -208,7 +223,7 @@
         }
     }
 
-    &__item--coldy {
+    &__item--coldy img {
         width: size(109px);
         height: size(18px);
 
@@ -222,7 +237,7 @@
         }
     }
 
-    &__item--glavstroy {
+    &__item--glavstroy img {
         width: size(170px);
         height: size(21px);
 
@@ -233,11 +248,11 @@
 
         @include vp-767 {
             width: 107px;
-            height: 112px;
+            height: 12px;
         }
     }
 
-    &__item--vk {
+    &__item--vk img {
         width: size(52px);
         height: size(52px);
 
@@ -247,7 +262,7 @@
         }
     }
 
-    &__item--otkrytie {
+    &__item--otkrytie img {
         width: size(154px);
         height: size(30px);
 
@@ -257,7 +272,7 @@
         }
     }
 
-    &__item--sber {
+    &__item--sber img {
         width: size(102px);
         height: size(18px);
 
@@ -272,7 +287,7 @@
         }
     }
 
-    &__item--pharmstandart {
+    &__item--pharmstandart img {
         width: size(133px);
         height: size(30px);
 

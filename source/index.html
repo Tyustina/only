@@ -10,7 +10,8 @@
   <link rel="preload" href="./fonts/tt-runs-trial-bold.woff2" type="font/woff2" as="font">
   <link rel="preload" href="./fonts/tt-runs-trial-demibold.woff2" type="font/woff2" as="font">
   <link rel="preload" href="./fonts/tt-runs-trial-medium.woff2" type="font/woff2" as="font">
-
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/main.js" defer></script>
 </head>
@@ -89,8 +90,7 @@
     <section class="hero">
       <h2 class="hero__title">Creative digital production</h2>
       <div class="hero__media">
-        <video src="video/only-teaser-v056-sound.webm" width="456" height="230" type="video/webm" autoplay loop
-          muted></video>
+        <video src="video/only-teaser-v056-sound.webm" width="456" height="230" autoplay loop muted></video>
       </div>
       <div class="hero__awards awards-widget">
         <ul class="awards-widget__list">
@@ -168,7 +168,6 @@
         </div>
         <button class="hero__button button">Начать проект</button>
       </div>
-      </div>
     </section>
     <section class="portfolio">
       <h2 class="portfolio__title title">Проекты</h2>
@@ -220,7 +219,7 @@
               <div class="portfolio-card__img">
                 <picture>
                   <source type="image/webp"
-                    srcset="./images/portfolio/severstal.webp 1x, ./images/portfolio/severstal@2x.webp" width="447"
+                    srcset="./images/portfolio/severstal.webp 1x, ./images/portfolio/severstal@2x.webp 2x" width="447"
                     height="450">
                   <img src="./images/portfolio/severstal.png" srcset="./images/portfolio/severstal@2x.png" width="447"
                     height="450" alt="Северсталь.">
@@ -725,24 +724,30 @@
               <div class="banners__desk">
                 <div class="banners__desk-string">
                   <p>Формируем</p>
-                  <img class="banners__icon--line" src="../icons/stack.svg#icon-line" width="44" height="35" alt="">
+                  <img class="banners__icon-line" src="../icons/stack.svg#icon-line" width="44" height="35" alt="">
                 </div>
                 <div class="banners__desk-string">
-                  <div class="banners__icon--heart">
+                  <div class="banners__icon-heart">
                     <picture>
-                      <img src="./images/icon-heart.png" width="44" height="44" alt="">
+                      <source srcset="./images/icon-heart.webp 1x, ./images/icon-heart@2x.webp 2x" type="image/webp"
+                        width="44" height="44">
+                      <img src="./images/icon-heart.png" srcset="./images/icon-heart@2x.png" width="44" height="44"
+                        alt="">
                     </picture>
                   </div>
                   <p>ценность бренда</p>
-                  <div class="banners__icon--town">
+                  <div class="banners__icon-town">
                     <picture>
-                      <img src="./images/icon-town.png" width="44" height="44" alt="">
+                      <source srcset="./images/icon-town.webp 1x, ./images/icon-town@2x.webp 2x" type="image/webp"
+                        width="44" height="44">
+                      <img src="./images/icon-town.png" srcset="./images/icon-town@2x.png" width="44" height="44"
+                        alt="">
                     </picture>
                   </div>
                   <p>ЖК</p>
                 </div>
                 <div class="banners__desk-string">
-                  <div class="banners__icon--planet">
+                  <div class="banners__icon-planet">
                     <img src="../icons/stack.svg#icon-planet" width="30" height="30" alt="">
                   </div>
                   <span>в digital - среде</span>
@@ -755,32 +760,43 @@
             <div class="banners__slide-pictures banners__slide-pictures--realty">
               <div class="banners__img banners__img--1">
                 <picture>
-                  <img src="./images/banners/realty-1.png" srcset="./images/banners/realty-1@2x.png" width="353"
-                    height="268" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-1.webp 1x, ./images/banners/realty-1@2x.webp 2x" width="353"
+                    height="268">
+                  <img src="./images/banners/realty-1.png" srcset="./images/banners/realty-1@2x.png 2x" width="353"
+                    height="268" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--2">
                 <picture>
-                  <img src="./images/banners/realty-2.png" srcset="./images/banners/realty-2@2x.png" width="180"
-                    height="390" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-2.webp 1x, ./images/banners/realty-2@2x.webp 2x" width="180"
+                    height="390">
+                  <img src="./images/banners/realty-2.png" srcset="./images/banners/realty-2@2x.png 2x" width="180"
+                    height="390" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--3">
                 <picture>
-                  <img src="./images/banners/realty-3.png" srcset="./images/banners/realty-3@2x.png" width="276"
-                    height="276" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-3.webp 1x, ./images/banners/realty-3@2x.webp 2x" width="276"
+                    height="276">
+                  <img src="./images/banners/realty-3.png" srcset="./images/banners/realty-3@2x.png 2x" width="276"
+                    height="276" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--4">
                 <picture>
-                  <img src="./images/banners/realty-4.png" srcset="./images/banners/realty-4@2x.png" width="374"
-                    height="296" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-4.webp 1x, ./images/banners/realty-4@2x.webp 2x" width="374"
+                    height="296">
+                  <img src="./images/banners/realty-4.png" srcset="./images/banners/realty-4@2x.png 2x" width="374"
+                    height="296" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--5">
                 <img src="./images/svg/realty-5.svg" width="62" height="50" alt="Иконка компьютера.">
               </div>
-            </div>
           </li>
           <li class="banners__slide banners__slide--app" data-id="2">
             <div class="banners__slide-text">
@@ -790,8 +806,8 @@
                   <p>Проектируем</p>
                 </div>
                 <div class="banners__desk-string">
-                  <div class="banners__icon--phone">
-                    <img src="./images/icon-phone.svg" width="19" height="24" alt="">
+                  <div class="banners__icon-phone">
+                    <img src="./icons/stack.svg#icon-phone" width="19" height="24" alt="">
                   </div>
                   <p>мобильные</p>
                 </div>
@@ -805,66 +821,83 @@
             <div class="banners__slide-pictures banners__slide-pictures--app">
               <div class="banners__img banners__img--1">
                 <picture>
-                  <img src="./images/banners/app-1.png" srcset="./images/banners/app-1@2x.png" width="262" height="167"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-1.webp 1x, ./images/banners/app-1@2x.webp 2x" width="262"
+                    height="167">
+                  <img src="./images/banners/app-1.png" srcset="./images/banners/app-1@2x.png 2x" width="262"
+                    height="167" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--2">
                 <picture>
-                  <img src="./images/banners/app-2.png" srcset="./images/banners/app-2@2x.png" width="226" height="479"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-2.webp 1x, ./images/banners/app-2@2x.webp 2x" width="226"
+                    height="479">
+                  <img src="./images/banners/app-2.png" srcset="./images/banners/app-2@2x.png 2x" width="226"
+                    height="479" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--3">
                 <picture>
-                  <img src="./images/banners/app-3.png" srcset="./images/banners/app-3@2x.png" width="267" height="92"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-3.webp 1x, ./images/banners/app-3@2x.webp 2x" width="267"
+                    height="92">
+                  <img src="./images/banners/app-3.png" srcset="./images/banners/app-3@2x.png 2x" width="267"
+                    height="92" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--4">
                 <picture>
-                  <img src="./images/banners/app-4.png" srcset="./images/banners/app-4@2x.png" width="229" height="479"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-4.webp 1x, ./images/banners/app-4@2x.webp 2x" width="229"
+                    height="479">
+                  <img src="./images/banners/app-4.png" srcset="./images/banners/app-4@2x.png 2x" width="229"
+                    height="479" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--5">
                 <picture>
-                  <img src="./images/banners/app-5.png" srcset="./images/banners/app-5@2x.png" width="140" height="40"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-5.webp 1x, ./images/banners/app-5@2x.webp 2x" width="140"
+                    height="40">
+                  <img src="./images/banners/app-5.png" srcset="./images/banners/app-5@2x.png 2x" width="140"
+                    height="40" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--6">
                 <picture>
-                  <img src="./images/banners/app-6.png" srcset="./images/banners/app-6@2x.png" width="90" height="90"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-6.webp 1x, ./images/banners/app-6@2x.webp 2x" width="90" height="90">
+                  <img src="./images/banners/app-6.png" srcset="./images/banners/app-6@2x.png 2x" width="90" height="90"
+                    alt="Пример проекта.">
                 </picture>
               </div>
             </div>
           </li>
-          <li class="banners__slide banners__slide--realty is-active" data-id="3">
+          <li class="banners__slide banners__slide--realty" data-id="3" data-animate>
             <div class="banners__slide-text">
               <h2 class="banners__title title">недвижимость</h2>
               <div class="banners__desk">
                 <div class="banners__desk-string">
                   <p>Формируем</p>
-                  <img class="banners__icon--line" src="../icons/stack.svg#icon-line" width="44" height="35" alt="">
+                  <img class="banners__icon-line" src="../icons/stack.svg#icon-line" width="44" height="35" alt="">
                 </div>
                 <div class="banners__desk-string">
-                  <div class="banners__icon--heart">
+                  <div class="banners__icon-heart">
                     <picture>
-                      <img src="./images/icon-heart.png" width="44" height="44" alt="">
+                      <source srcset="./images/icon-heart.webp 1x, ./images/icon-heart@2x.webp 2x" type="image/webp"
+                        width="44" height="44">
+                      <img src="./images/icon-heart.png" srcset="./images/icon-heart@2x.png" width="44" height="44"
+                        alt="">
                     </picture>
                   </div>
                   <p>ценность бренда</p>
-                  <div class="banners__icon--town">
+                  <div class="banners__icon-town">
                     <picture>
-                      <img src="./images/icon-town.png" width="44" height="44" alt="">
+                      <source srcset="./images/icon-town.webp 1x, ./images/icon-town@2x.webp 2x" type="image/webp"
+                        width="44" height="44">
+                      <img src="./images/icon-town.png" srcset="./images/icon-town@2x.png" width="44" height="44"
+                        alt="">
                     </picture>
                   </div>
                   <p>ЖК</p>
                 </div>
                 <div class="banners__desk-string">
-                  <div class="banners__icon--planet">
+                  <div class="banners__icon-planet">
                     <img src="../icons/stack.svg#icon-planet" width="30" height="30" alt="">
                   </div>
                   <span>в digital - среде</span>
@@ -877,32 +910,43 @@
             <div class="banners__slide-pictures banners__slide-pictures--realty">
               <div class="banners__img banners__img--1">
                 <picture>
-                  <img src="./images/banners/realty-1.png" srcset="./images/banners/realty-1@2x.png" width="353"
-                    height="268" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-1.webp 1x, ./images/banners/realty-1@2x.webp 2x" width="353"
+                    height="268">
+                  <img src="./images/banners/realty-1.png" srcset="./images/banners/realty-1@2x.png 2x" width="353"
+                    height="268" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--2">
                 <picture>
-                  <img src="./images/banners/realty-2.png" srcset="./images/banners/realty-2@2x.png" width="180"
-                    height="390" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-2.webp 1x, ./images/banners/realty-2@2x.webp 2x" width="180"
+                    height="390">
+                  <img src="./images/banners/realty-2.png" srcset="./images/banners/realty-2@2x.png 2x" width="180"
+                    height="390" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--3">
                 <picture>
-                  <img src="./images/banners/realty-3.png" srcset="./images/banners/realty-3@2x.png" width="276"
-                    height="276" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-3.webp 1x, ./images/banners/realty-3@2x.webp 2x" width="276"
+                    height="276">
+                  <img src="./images/banners/realty-3.png" srcset="./images/banners/realty-3@2x.png 2x" width="276"
+                    height="276" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--4">
                 <picture>
-                  <img src="./images/banners/realty-4.png" srcset="./images/banners/realty-4@2x.png" width="374"
-                    height="296" alt="">
+                  <source type="image/webp"
+                    srcset="./images/banners/realty-4.webp 1x, ./images/banners/realty-4@2x.webp 2x" width="374"
+                    height="296">
+                  <img src="./images/banners/realty-4.png" srcset="./images/banners/realty-4@2x.png 2x" width="374"
+                    height="296" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--5">
                 <img src="./images/svg/realty-5.svg" width="62" height="50" alt="Иконка компьютера.">
               </div>
-            </div>
           </li>
           <li class="banners__slide banners__slide--app" data-id="4">
             <div class="banners__slide-text">
@@ -912,8 +956,8 @@
                   <p>Проектируем</p>
                 </div>
                 <div class="banners__desk-string">
-                  <div class="banners__icon--phone">
-                    <img src="./images/icon-phone.svg" width="19" height="24" alt="">
+                  <div class="banners__icon-phone">
+                    <img src="./icons/stack.svg#icon-phone" width="19" height="24" alt="">
                   </div>
                   <p>мобильные</p>
                 </div>
@@ -927,38 +971,49 @@
             <div class="banners__slide-pictures banners__slide-pictures--app">
               <div class="banners__img banners__img--1">
                 <picture>
-                  <img src="./images/banners/app-1.png" srcset="./images/banners/app-1@2x.png" width="262" height="167"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-1.webp 1x, ./images/banners/app-1@2x.webp 2x" width="262"
+                    height="167">
+                  <img src="./images/banners/app-1.png" srcset="./images/banners/app-1@2x.png 2x" width="262"
+                    height="167" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--2">
                 <picture>
-                  <img src="./images/banners/app-2.png" srcset="./images/banners/app-2@2x.png" width="226" height="479"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-2.webp 1x, ./images/banners/app-2@2x.webp 2x" width="226"
+                    height="479">
+                  <img src="./images/banners/app-2.png" srcset="./images/banners/app-2@2x.png 2x" width="226"
+                    height="479" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--3">
                 <picture>
-                  <img src="./images/banners/app-3.png" srcset="./images/banners/app-3@2x.png" width="267" height="92"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-3.webp 1x, ./images/banners/app-3@2x.webp 2x" width="267"
+                    height="92">
+                  <img src="./images/banners/app-3.png" srcset="./images/banners/app-3@2x.png 2x" width="267"
+                    height="92" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--4">
                 <picture>
-                  <img src="./images/banners/app-4.png" srcset="./images/banners/app-4@2x.png" width="229" height="479"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-4.webp 1x, ./images/banners/app-4@2x.webp 2x" width="229"
+                    height="479">
+                  <img src="./images/banners/app-4.png" srcset="./images/banners/app-4@2x.png 2x" width="229"
+                    height="479" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--5">
                 <picture>
-                  <img src="./images/banners/app-5.png" srcset="./images/banners/app-5@2x.png" width="140" height="40"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-5.webp 1x, ./images/banners/app-5@2x.webp 2x" width="140"
+                    height="40">
+                  <img src="./images/banners/app-5.png" srcset="./images/banners/app-5@2x.png 2x" width="140"
+                    height="40" alt="Пример проекта.">
                 </picture>
               </div>
               <div class="banners__img banners__img--6">
                 <picture>
-                  <img src="./images/banners/app-6.png" srcset="./images/banners/app-6@2x.png" width="90" height="90"
-                    alt="">
+                  <source type="image/webp" srcset="./images/banners/app-6.webp 1x, ./images/banners/app-6@2x.webp 2x" width="90" height="90">
+                  <img src="./images/banners/app-6.png" srcset="./images/banners/app-6@2x.png 2x" width="90" height="90"
+                    alt="Пример проекта.">
                 </picture>
               </div>
             </div>
@@ -975,7 +1030,7 @@
     <section class="awards">
       <h2 class="awards__title title">Награды</h2>
       <div class="awards__text">
-        <p>За 10 лет активной работы мы завоевали более 150 призовых мест </p>
+        <p>За 10 лет активной работы мы завоевали более 150<br>призовых мест </p>
         <p>Каждый год подтверждаем высокие позиции в Рейтинге Рунета в сегменте крупного B2B-бизнеса. Побеждаем на
           международных и российских конкурсах в номинациях digital-дизайна и разработки сайтов.</p>
       </div>
@@ -1112,7 +1167,7 @@
         </li>
         <li class="contacts__item">
           <p>telegram для связи</p>
-          <img src="./images/svg/tg-icon.svg" width="16" height="16" alt="">
+          <img src="../icons/stack.svg#telegram" width="16" height="16" alt="">
           <a class="contacts__link" href="https://t.me/onlydigitalagency">@onlydigitalagency</a>
         </li>
       </ul>
