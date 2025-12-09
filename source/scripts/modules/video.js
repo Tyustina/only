@@ -9,7 +9,7 @@ export function scaleVideo() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
 
-            if (documentHeight === 0) { 
+            if (documentHeight === 0) {
                 videoContainer.style.transform = ` scale(${minScale})`;
                 return;
             }
@@ -24,5 +24,3 @@ export function scaleVideo() {
         handleScroll();
     }
 }
-
-

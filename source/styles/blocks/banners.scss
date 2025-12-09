@@ -2,444 +2,448 @@
 @use "../common/mixin.scss" as m;
 
 .banners {
-    @include m.container;
-    display: grid;
+  @include m.container;
+  display: grid;
+  width: 100%;
+  padding-top: size(60px);
+  padding-bottom: size(130px);
+  overflow: hidden;
+
+  @include vp-1279 {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__slider {
+    @include m.list-reset;
+    position: relative;
     width: 100%;
-    padding-top: size(60px);
-    padding-bottom: size(130px);
-    overflow: hidden;
+    min-height: size(650px);
 
     @include vp-1279 {
-        padding-top: 40px;
-        padding-bottom: 80px;
+      min-height: 450px;
+    }
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 42% 58%;
+    border-radius: size(30px);
+    background-color: $default-white;
+    padding-top: size(100px);
+    padding-bottom: size(200px);
+    padding-left: size(30px);
+    padding-right: size(30px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    @include vp-1279 {
+      grid-template-columns: 65% 35%;
+      padding: 60px 25px 85px;
     }
 
-    @include vp-767 {
-        display: none;
+    &--app {
+      background-color: #EDEBE9;
     }
+  }
 
-    &__wrapper {
-        position: relative;
+  &__slide-text {
+    display: grid;
+    gap: size(30px);
+
+    @include vp-1279 {
+      gap: 14px;
     }
+  }
 
-    &__slider {
-        @include m.list-reset;
-        position: relative;
-        width: 100%;
-        min-height: size(650px);
+  &__title {
+    font-weight: 600;
+    font-family: $ff-default;
+    font-size: size(14px);
 
-        @include vp-1279 {
-            min-height: 450px;
-        }
+    @include vp-1279 {
+      font-size: 13px;
     }
+  }
 
-    &__slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: 42% 58%;
-        border-radius: size(30px);
-        background-color: $default-white;
-        padding-top: size(100px);
-        padding-bottom: size(200px);
-        padding-left: size(30px);
-        padding-right: size(30px);
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
+  p:not(.banners__desk p) {
+    width: 85%;
+    font-family: $ff-second;
+    font-weight: 400;
+    font-size: size(16px);
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-in, transform 0.9s ease;
 
-        @include vp-1279 {
-            grid-template-columns: 65% 35%;
-            padding: 60px 25px 85px;
-        }
 
-        &--app {
-            background-color: #EDEBE9;
-        }
+    @include vp-1279 {
+      width: 90%;
+      font-size: 15px;
+      margin-top: 8px;
     }
+  }
 
-    &__slide-text {
-        display: grid;
-        gap: size(30px);
+  &__desk {
+    display: flex;
+    flex-direction: column;
+    gap: size(2px);
 
-        @include vp-1279 {
-            gap: 14px;
-        }
+    @include vp-1279 {
+      margin-top: 8px;
+      gap: 0;
     }
+  }
 
-    &__title {
-        font-weight: 600;
-        font-family: $ff-default;
-        font-size: size(14px);
 
-        @include vp-1279 {
-            font-size: 13px;
-        }
-    }
+  &__desk-string {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
 
-    p:not(.banners__desk p) {
-        width: 85%;
-        font-family: $ff-second;
-        font-weight: 400;
-        font-size: size(16px);
-        line-height: 140%;
-        letter-spacing: -0.02em;
+    p,
+    span {
+      font-weight: 600;
+      font-size: size(36px);
+      line-height: 100%;
+      letter-spacing: -0.03em;
+      color: $dark-green;
+      margin: 0;
+      margin-right: size(12px);
+
+      @include vp-1279 {
+        font-size: 28px;
+        line-height: 100%;
+        margin-right: 8px;
+      }
+
+      &:last-child {
         margin: 0;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-in, transform 0.9s ease;
-
-
-        @include vp-1279 {
-            width: 90%;
-            font-size: 15px;
-            margin-top: 8px;
-        }
+      }
     }
 
-    &__desk {
-        display: flex;
-        flex-direction: column;
-        gap: size(2px);
+    p {
+      margin-top: 4px;
 
-        @include vp-1279 {
-            margin-top: 8px;
-            gap: 0;
-        }
+      @include vp-1279 {
+        margin: 0;
+      }
     }
 
+    span {
+      border-radius: size(154px);
+      padding: size(2px) size(23px) size(5px);
+      line-height: 115%;
+      background-color: $green;
+      margin: 0;
 
-    &__desk-string {
-        display: flex;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.5s ease-in;
-
-        p,
-        span {
-            font-weight: 600;
-            font-size: size(36px);
-            line-height: 100%;
-            letter-spacing: -0.03em;
-            color: $dark-green;
-            margin: 0;
-            margin-right: size(12px);
-
-            @include vp-1279 {
-                font-size: 28px;
-                line-height: 100%;
-                margin-right: 8px;
-            }
-
-            &:last-child {
-                margin: 0;
-            }
-        }
-
-        p {
-            margin-top: 4px;
-
-            @include vp-1279 {
-                margin: 0;
-            }
-        }
-
-        span {
-            border-radius: size(154px);
-            padding: size(2px) size(23px) size(5px);
-            line-height: 115%;
-            background-color: $green;
-            margin: 0;
-
-            @include vp-1279 {
-                padding: 2px 18px 5px;
-            }
-        }
-
-        &:last-child {
-            @include vp-1279 {
-                margin-top: -4px;
-            }
-        }
+      @include vp-1279 {
+        padding: 2px 18px 5px;
+      }
     }
 
-    &__icon-line {
-        width: size(44px);
-        height: size(35px);
+    &:last-child {
+      @include vp-1279 {
+        margin-top: -4px;
+      }
+    }
+  }
 
-        @include vp-1279 {
-            width: 36px;
-            height: 29px;
-            margin-left: 9px;
-        }
+  &__icon-line {
+    width: size(44px);
+    height: size(35px);
+
+    @include vp-1279 {
+      width: 36px;
+      height: 29px;
+      margin-left: 9px;
+    }
+  }
+
+  &__icon-heart,
+  &__icon-town {
+    img {
+      width: size(44px);
+      height: size(44px);
     }
 
-    &__icon-heart,
-    &__icon-town {
-        width: size(44px);
-        height: size(44px);
+    @include vp-1279 {
+      margin-right: -6px;
 
-        @include vp-1279 {
-            margin-right: -6px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
 
-            img {
-                width: 32px;
-                height: 32px;
-            }
-        }
+  &__icon-planet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+    border-radius: size(180px);
+    padding: 0;
+    transform: scale(0);
+    transition: padding 0.5s ease-in, transform 0.5s ease-in;
+
+    img {
+      width: size(30px);
+      height: size(30px);
+
+      @include vp-1279 {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  &__icon-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: $green;
+    padding: 0;
+    transform: scale(0);
+    transition: padding 0.5s ease-in, transform 0.5s ease-in;
+
+    img {
+      width: size(22px);
+      height: size(26px);
+    }
+  }
+
+  &__slide-pictures {
+    position: relative;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin-top: -6px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-in, transform 0.9s ease;
+
+    @include vp-1279 {
+      margin-top: 4px;
+    }
+  }
+
+  &__toggles {
+    @include m.list-reset;
+    position: absolute;
+    bottom: size(40px);
+    left: size(40px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: size(2px) size(10px);
+    z-index: 5;
+
+    @include vp-1279 {
+      gap: 2px 5px;
+      bottom: 26px;
+      left: calc(50% - 20px);
+    }
+  }
+
+
+  &__toggle {
+    display: block;
+    width: size(10px);
+    height: size(10px);
+    background-color: $default-black;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.3;
+
+    @include vp-1279 {
+      width: 6px;
+      height: 6px;
+
+    }
+  }
+
+  &__toggle.is-active {
+    opacity: 1;
+  }
+
+  &__img {
+    position: absolute;
+  }
+
+  &__img img {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.8s ease-in, transform 0.9s ease;
+  }
+
+  &__slide-pictures--realty>&__img--1 {
+    width: size(353px);
+    height: size(268px);
+    top: size(210px);
+    left: size(-90px);
+
+    @include vp-1279 {
+      width: 187px;
+      height: 102px;
+      top: 167px;
+      left: -112px;
+    }
+  }
+
+  &__slide-pictures--realty>&__img--2 {
+    width: size(180px);
+    height: size(390px);
+    top: size(-29px);
+    left: size(187px);
+
+    @include vp-1279 {
+      width: 99px;
+      height: 215px;
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  &__slide-pictures--realty>&__img--3 {
+    width: size(276px);
+    height: size(276px);
+    top: size(199px);
+    left: size(308px);
+
+    @include vp-1279 {
+      width: 144px;
+      height: 144px;
+      top: 169px;
+      left: 63px;
+    }
+  }
+
+  &__slide-pictures--realty>&__img--4 {
+    width: size(374px);
+    height: size(296px);
+    top: size(-22px);
+    right: size(-11px);
+
+    @include vp-1279 {
+      width: 207px;
+      height: 207px;
+      top: 49px;
+      right: -23px;
+    }
+  }
+
+  &__slide-pictures--realty>&__img--5 {
+    width: size(62px);
+    height: size(50px);
+    top: size(384px);
+    right: size(149px);
+
+    @include vp-1279 {
+      display: none;
+    }
+  }
+
+  &__slide-pictures--app>&__img--1 {
+    width: size(262px);
+    height: size(167px);
+    top: size(243px);
+    left: size(-96px);
+    z-index: 2;
+  }
+
+  &__slide-pictures--app>&__img--2 {
+    width: size(226px);
+    height: size(479px);
+    top: size(-51px);
+    left: size(92px);
+  }
+
+  &__slide-pictures--app>&__img--3 {
+    width: size(267px);
+    height: size(92px);
+    top: size(314px);
+    right: size(47px);
+    z-index: 2;
+  }
+
+  &__slide-pictures--app>&__img--4 {
+    width: size(229px);
+    height: size(479px);
+    top: size(20px);
+    left: size(354px);
+  }
+
+  &__slide-pictures--app>&__img--5 {
+    width: size(140px);
+    height: size(40px);
+    top: size(402px);
+    right: size(96px);
+    z-index: 2;
+  }
+
+  &__slide-pictures--app>&__img--6 {
+    width: size(90px);
+    height: size(90px);
+    top: size(141px);
+    left: size(-2px);
+  }
+
+  &__slide.is-active,
+  &__slide.animate {
+    opacity: 1;
+    z-index: 4;
+
+    img {
+      opacity: 1;
+      transform: scale(1);
     }
 
-    &__icon-planet {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $green;
-        border-radius: size(180px);
-        padding: 0;
-        transform: scale(0);
-        transition: padding 0.5s ease-in, transform 0.5s ease-in;
-
-        img {
-            width: size(30px);
-            height: size(30px);
-
-            @include vp-1279 {
-                width: 22px;
-                height: 22px;
-            }
-        }
+    .banners__button,
+    p:not(.banners__desk p) {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    &__icon-phone {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 12px;
-        background-color: $green;
-        padding: 0;
-        transform: scale(0);
-        transition: padding 0.5s ease-in, transform 0.5s ease-in;
+    .banners__icon-planet {
+      padding: size(10px) size(18px);
+      transform: scale(1);
 
-        img {
-            width: size(22px);
-            height: size(26px);
-        }
+      @include vp-1279 {
+        padding: 8px 14px;
+      }
     }
 
-    &__slide-pictures {
-        position: relative;
-        display: flex;
+    .banners__icon-phone {
+      padding: size(7px) size(14px);
+      transform: scale(1);
 
-        img {
-            width: 100%;
-        }
     }
 
-    &__button {
-        margin-top: -6px;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-in, transform 0.9s ease;
-        @include vp-1279 {
-            margin-top: 4px;
-        }
+    .banners__desk-string {
+      opacity: 1;
     }
-
-    &__toggles {
-        @include m.list-reset;
-        position: absolute;
-        bottom: size(40px);
-        left: size(40px);
-        display: flex;
-        flex-wrap: wrap;
-        gap: size(2px) size(10px);
-        z-index: 5;
-
-        @include vp-1279 {
-            gap: 2px 5px;
-            bottom: 26px;
-            left: calc(50% - 20px);
-        }
-    }
-
-
-    &__toggle {
-        display: block;
-        width: size(10px);
-        height: size(10px);
-        background-color: $default-black;
-        border-radius: 100%;
-        cursor: pointer;
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0.3;
-
-        @include vp-1279 {
-            width: 6px;
-            height: 6px;
-
-        }
-    }
-
-    &__toggle.is-active {
-        opacity: 1;
-    }
-
-    &__img {
-        position: absolute;
-    }
-
-    &__img img {
-        opacity: 0;
-        transform: scale(0);
-        transition: opacity 0.8s ease-in, transform 0.9s ease;
-    }
-
-    &__slide-pictures--realty>&__img--1 {
-        width: size(353px);
-        height: size(268px);
-        top: size(210px);
-        left: size(-90px);
-
-        @include vp-1279 {
-            width: 187px;
-            height: 102px;
-            top: 167px;
-            left: -112px;
-        }
-    }
-
-    &__slide-pictures--realty>&__img--2 {
-        width: size(180px);
-        height: size(390px);
-        top: size(-29px);
-        left: size(187px);
-
-        @include vp-1279 {
-            width: 99px;
-            height: 215px;
-            top: 5px;
-            left: 5px;
-        }
-    }
-
-    &__slide-pictures--realty>&__img--3 {
-        width: size(276px);
-        height: size(276px);
-        top: size(199px);
-        left: size(308px);
-
-        @include vp-1279 {
-            width: 144px;
-            height: 144px;
-            top: 169px;
-            left: 63px;
-        }
-    }
-
-    &__slide-pictures--realty>&__img--4 {
-        width: size(374px);
-        height: size(296px);
-        top: size(-22px);
-        right: size(-11px);
-
-        @include vp-1279 {
-            width: 207px;
-            height: 207px;
-            top: 49px;
-            right: -23px;
-        }
-    }
-
-    &__slide-pictures--realty>&__img--5 {
-        width: size(62px);
-        height: size(50px);
-        top: size(384px);
-        right: size(149px);
-
-        @include vp-1279 {
-            display: none;
-        }
-    }
-
-    &__slide-pictures--app>&__img--1 {
-        width: size(262px);
-        height: size(167px);
-        top: size(243px);
-        left: size(-96px);
-        z-index: 2;
-    }
-
-    &__slide-pictures--app>&__img--2 {
-        width: size(226px);
-        height: size(479px);
-        top: size(-51px);
-        left: size(92px);
-    }
-
-    &__slide-pictures--app>&__img--3 {
-        width: size(267px);
-        height: size(92px);
-        top: size(314px);
-        right: size(47px);
-        z-index: 2;
-    }
-
-    &__slide-pictures--app>&__img--4 {
-        width: size(229px);
-        height: size(479px);
-        top: size(20px);
-        left: size(354px);
-    }
-
-    &__slide-pictures--app>&__img--5 {
-        width: size(140px);
-        height: size(40px);
-        top: size(402px);
-        right: size(96px);
-        z-index: 2;
-    }
-
-    &__slide-pictures--app>&__img--6 {
-        width: size(90px);
-        height: size(90px);
-        top: size(141px);
-        left: size(-2px);
-    }
-
-    &__slide.is-active {
-        opacity: 1;
-        z-index: 4;
-
-        img {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .banners__button,
-        p:not(.banners__desk p) {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .banners__icon-planet {
-            padding: size(10px) size(18px);
-            transform: scale(1);
-
-            @include vp-1279 {
-                padding: 8px 14px;
-            }
-        }
-
-        .banners__icon-phone {
-            padding: size(7px) size(14px);
-            transform: scale(1);
-
-        }
-
-        .banners__desk-string {
-            opacity: 1;
-        }
-    }
+  }
 }

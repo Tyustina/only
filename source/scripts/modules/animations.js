@@ -1,7 +1,7 @@
 let observer = null;
 
 export function initScrollAnimation() {
-    const animatedElements = document.querySelectorAll('[data-animate]');
+    const animatedElements = document.querySelectorAll('[data-animate="true"]');
 
     if (!animatedElements.length) {
         return;

@@ -109,6 +109,15 @@
                 font-size: 19px;
             }
         }
+        svg {
+          width: size(24px);
+          height: size(24px);
+
+          @include vp-1279 {
+            width: 20px;
+            height: 20px;
+          }
+        }
 
         @include vp-1279 {
             grid-column: 1/2;

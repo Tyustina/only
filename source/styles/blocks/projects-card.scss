@@ -2,157 +2,159 @@
 @use "../common/mixin.scss" as m;
 
 .projects-card {
-    flex-shrink: 0;
-    border-radius: size(30px);
-    margin-right: size(20px);
-    transition: transform 0.5s ease-in, border-radius 0.5s ease-in;
-    cursor: pointer;
+  flex-shrink: 0;
+  border-radius: size(30px);
+  margin-right: size(20px);
+  transition: transform 0.5s ease-in, border-radius 0.5s ease-in;
+  cursor: pointer;
+
+  @include vp-1279 {
+    border-radius: 16px;
+    margin-right: 15px;
+  }
+
+  @include vp-767 {
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--severstal {
+    background:
+      linear-gradient(180deg, transparent 0%, $default-white 74%), radial-gradient(100% 89% at 92% 46%, $default-white 0%, rgba(4, 48, 106, 0.3) 100%),
+      radial-gradient(117% 164% at 41% 14%, $default-white 0%, #dae2ef 48%, #dae2ef 100%);
+  }
+
+  &--sibur {
+    background: linear-gradient(to bottom, #439E9F 6%, $default-white 85%);
+  }
+
+  &--mr-group {
+    background:
+      linear-gradient(to bottom, transparent 25%, $default-white 75%),
+      linear-gradient(98deg, #0000 45%, #B9ABDF 42%),
+      linear-gradient(180deg, #39276a 1%, #6f5ca4 13%, #c6bddf 60%, #fff 85%);
+  }
+
+  &--glavstroy {
+    background: linear-gradient(to bottom, #3D7CB2 20%, #86ADCD 45%, $default-white 85%);
+  }
+
+  &--tek {
+    background: linear-gradient(to bottom, #3C697A 20%, #77A1B0 42%, $default-white 85%);
+  }
+
+  &--pharmstandart {
+    background: linear-gradient(to bottom, #006648 20%, #80aea3 45%, $default-white 85%);
+  }
+
+  a {
+    width: size(330px);
+    min-height: size(320px);
+    display: flex;
+    flex-direction: column;
+    padding: size(30px) size(29px) size(30px) size(30px);
 
     @include vp-1279 {
-        border-radius: 16px;
-        margin-right: 15px;
+      padding: 20px;
+      width: 357px;
+      min-height: 280px;
     }
 
     @include vp-767 {
-        margin-right: 10px;
+      width: 315px;
+      min-height: 240px;
+    }
+  }
+
+  &__list {
+    @include m.list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    gap: size(5px);
+
+    li {
+      border-radius: size(12px);
+      width: size(64px);
+      height: size(64px);
+
+      @include vp-1279 {
+        width: 75px;
+        height: 75px;
+      }
+
+      @include vp-767 {
+        width: 65px;
+        height: 65px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: size(5px);
+    margin-top: auto;
+
+    span {
+      font-family: $ff-second;
+      font-weight: 500;
+      font-size: size(12px);
+      line-height: 130%;
+      letter-spacing: -0.02em;
+      opacity: 0.6;
+
+      @include vp-1279 {
+        font-size: 12px;
+      }
     }
 
-    &:last-child {
-        margin-right: 0;
+    h3 {
+      font-weight: 600;
+      font-size: size(18px);
+      line-height: 125%;
+      letter-spacing: -0.03em;
+      margin: 0;
+      margin-top: size(5px);
+
+      @include vp-1279 {
+        font-size: 15px;
+        margin-top: 4px;
+      }
+
+      @include vp-767 {
+        margin-top: 0;
+      }
     }
 
-    &--severstal {
-        background:
-            linear-gradient(180deg, transparent 0%, $default-white 74%), radial-gradient(100% 89% at 92% 46%, $default-white 0%, rgba(4, 48, 106, 0.3) 100%),
-            radial-gradient(117% 164% at 41% 14%, $default-white 0%, #dae2ef 48%, #dae2ef 100%);
+    p {
+      width: 80%;
+      font-family: $ff-second;
+      font-weight: 400;
+      font-size: size(16px);
+      line-height: 140%;
+      letter-spacing: -0.02em;
+      margin: 0;
+      padding: 0;
+      opacity: 0.6;
+
+      @include vp-1279 {
+        font-size: 15px;
+        width: 100%;
+      }
     }
+  }
 
-    &--sibur {
-        background: linear-gradient(to bottom, #439E9F 6%, $default-white 85%);
+  &:hover {
+    @include only-desktop {
+      transform: scale(1.05);
+      border-radius: size(40px);
     }
-
-    &--mr-group {
-        background:
-            linear-gradient(to bottom, transparent 25%, $default-white 75%),
-            linear-gradient(98deg, #0000 45%, #B9ABDF 42%),
-            linear-gradient(180deg, #39276a 1%, #6f5ca4 13%, #c6bddf 60%, #fff 85%);
-    }
-
-    &--glavstroy {
-        background: linear-gradient(to bottom, #3D7CB2 20%, #86ADCD 45%, $default-white 85%);
-    }
-
-    &--tek {
-        background: linear-gradient(to bottom, #3C697A 20%, #77A1B0 42%, $default-white 85%);
-    }
-
-    &--pharmstandart {
-        background: linear-gradient(to bottom, #006648 20%, #80aea3 45%, $default-white 85%);
-    }
-
-    a {
-        
-        display: flex;
-        flex-direction: column;
-        padding: size(30px) size(29px) size(30px) size(30px);
-
-        @include vp-1279 {
-            padding: 20px;
-            width: 357px;
-            min-height: 280px;
-        }
-
-        @include vp-767 {
-            width: 315px;
-            min-height: 240px;
-        }
-    }
-
-    &__list {
-        @include m.list-reset;
-        display: flex;
-        flex-wrap: wrap;
-        gap: size(5px);
-
-        li {
-            border-radius: size(12px);
-            width: size(64px);
-            height: size(64px);
-
-            @include vp-1279 {
-                width: 75px;
-                height: 75px;
-            }
-
-            @include vp-767 {
-                width: 65px;
-                height: 65px;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: size(5px);
-        margin-top: auto;
-
-        span {
-            font-family: $ff-second;
-            font-weight: 500;
-            font-size: size(12px);
-            line-height: 130%;
-            letter-spacing: -0.02em;
-            opacity: 0.6;
-            @include vp-1279 {
-                font-size: 12px;
-            }
-        }
-
-        h3 {
-            font-weight: 600;
-            font-size: size(18px);
-            line-height: 125%;
-            letter-spacing: -0.03em;
-            margin: 0;
-            margin-top: size(5px);
-
-            @include vp-1279 {
-                font-size: 15px;
-                margin-top: 4px;
-            }
-
-            @include vp-767 {
-                margin-top: 0;
-            }
-        }
-
-        p {
-            width: 80%;
-            font-family: $ff-second;
-            font-weight: 400;
-            font-size: size(16px);
-            line-height: 140%;
-            letter-spacing: -0.02em;
-            margin: 0;
-            padding: 0;
-            opacity: 0.6;
-
-            @include vp-1279 {
-                font-size: 15px;
-                width: 100%;
-            }
-        }
-    }
-
-    &:hover {
-        @include only-desktop {
-            transform: scale(1.05);
-            border-radius: size(40px);
-        }
-    }
+  }
 }

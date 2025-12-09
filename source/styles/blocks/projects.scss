@@ -71,7 +71,7 @@
         padding-left: size(30px);
 
         @include vp-1279 {
-           padding-left: 20px;
+          padding-left: 20px;
         }
 
         @include vp-767 {
@@ -167,5 +167,4 @@
             }
         }
     }
-
 }
